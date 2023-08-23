@@ -1,0 +1,19 @@
+.simple-animation{
+    animation-duration: var(--simple-animation-duration, 1s);
+    animation-fill-mode: both;
+
+    &.delay{
+        animation-delay: var(--simple-animation-delay, 1s);
+    }
+    &.repeat{
+        animation-iteration-count: var(--simple-animation-repeat, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .simple-animation {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
