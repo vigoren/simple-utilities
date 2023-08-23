@@ -1,7 +1,7 @@
-export default class Vanimation {
+export default class SimpleAnimation {
     constructor() {}
 
     test() {
-        console.log("Vanimation test");
+        console.log("Simple Animation test");
     }
 }

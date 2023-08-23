@@ -1,4 +1,4 @@
 import "./styles/index.scss";
-import Vanimation from "./scripts";
+import SimpleAnimation from "./scripts";
 
-export default Vanimation;
+export default SimpleAnimation;

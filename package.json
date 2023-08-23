@@ -31,9 +31,9 @@
   "author": "Dean Vigoren (Vigorator)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/vigoren/Vanimation/issues"
+    "url": "https://github.com/vigoren/simple-animation/issues"
   },
-  "homepage": "https://github.com/vigoren/Vanimation#readme",
+  "homepage": "https://github.com/vigoren/simple-animation#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
