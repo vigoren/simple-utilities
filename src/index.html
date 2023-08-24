@@ -2,7 +2,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Examples</title>
-    <link rel="stylesheet" href="styles/index.scss" />
     <style>
         .container{
             position: relative;
@@ -15,8 +14,59 @@
     </style>
 </head>
 <body>
-    <div class="sa-container">
-        <h1 class="simple-animation sa-fade-in">This is Test</h1>
+    <div class="sa-selector">
+        <label>
+            <span>Animation</span>
+            <select id="animation-selector">
+                <option value="">Select Animation</option>
+                <option value="sa-fade-in">Fade In</option>
+                <option value="sa-fade-out">Fade Out</option>
+                <option value="sa-slide-in-right">Slide In Right</option>
+                <option value="sa-slide-in-left">Slide In Left</option>
+                <option value="sa-slide-in-top">Slide In Top</option>
+                <option value="sa-slide-in-bottom">Slide In Bottom</option>
+                <option value="sa-slide-out-right">Slide Out Right</option>
+                <option value="sa-slide-out-left">Slide Out Left</option>
+                <option value="sa-slide-out-top">Slide Out Top</option>
+                <option value="sa-slide-out-bottom">Slide Out Bottom</option>
+                <option value="sa-fade-in-and-slide-right">Fade In And Slide Right</option>
+                <option value="sa-fade-in-and-slide-left">Fade In And Slide Left</option>
+                <option value="sa-fade-in-and-slide-top">Fade In And Slide Top</option>
+                <option value="sa-fade-in-and-slide-bottom">Fade In And Slide Bottom</option>
+                <option value="sa-fade-in-then-slide-right">Fade In Then Slide Right</option>
+                <option value="sa-fade-in-then-slide-left">Fade In Then Slide Left</option>
+                <option value="sa-fade-in-then-slide-top">Fade In Then Slide Top</option>
+                <option value="sa-fade-in-then-slide-bottom">Fade In Then Slide Bottom</option>
+                <option value="sa-slide-right-and-fade-out">Slide Right And Fade Out</option>
+                <option value="sa-slide-left-and-fade-out">Slide Left And Fade Out</option>
+                <option value="sa-slide-top-and-fade-out">Slide Top And Fade Out</option>
+                <option value="sa-slide-bottom-and-fade-out">Slide Bottom And Fade Out</option>
+                <option value="sa-slide-right-then-fade-out">Slide Right Then Fade Out</option>
+                <option value="sa-slide-left-then-fade-out">Slide Left Then Fade Out</option>
+                <option value="sa-slide-top-then-fade-out">Slide Top Then Fade Out</option>
+                <option value="sa-slide-bottom-then-fade-out">Slide Bottom Then Fade Out</option>
+            </select>
+        </label>
     </div>
+    <div class="sa-container">
+        <h1 class="simple-animation ">This is Test</h1>
+    </div>
+    <div>
+        <div data-sa-collapse="#unique"><span>Expand/Collapse</span></div>
+        <ul id="unique" class="simple-animation sa-collapse">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+    <script type="module" src="scripts/index.ts"></script>
+    <script>
+        //When select change update the H1 class
+        document.getElementById('animation-selector').addEventListener('change', function(e){
+            document.querySelector('.sa-container h1').className = 'simple-animation ' + e.target.value;
+        });
+    </script>
 </body>
 </html>

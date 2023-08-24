@@ -6,6 +6,8 @@ export default defineConfig({
     build: {
         outDir: "../dist",
         emptyOutDir: true,
+        minify: true,
+        reportCompressedSize: true,
         lib: {
             entry: resolve(__dirname, "src/index.ts"),
             name: "SimpleAnimation",

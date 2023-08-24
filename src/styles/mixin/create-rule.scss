@@ -1,0 +1,44 @@
+@mixin create-rules($actions, $movements: (), $directions: ()){
+  @each $action in $actions{
+    @if length($movements) == 0{
+      &.#{$action}{
+        animation-name: #{$action};
+        @content;
+      }
+    }
+    @else{
+      @each $movement in $movements{
+        @if length($directions) == 0{
+          &.#{$action}-#{$movement}{
+            animation-name: #{$action}-#{$movement};
+            @content;
+          }
+        } @else {
+          @each $direction in $directions{
+            &.#{$action}-#{$movement}-#{$direction}{
+              animation-name: #{$action}-#{$movement}-#{$direction};
+              @content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin create-condition-rules($firstAction, $secondAction, $movements, $directions, $condition){
+  @each $movement in $movements{
+    @each $direction in $directions{
+      &.#{$firstAction}-#{$movement}-#{$condition}-#{$secondAction}-#{$direction}{
+        @if $firstAction == slide {
+          animation-name: #{$firstAction}-#{$direction}-#{$movement}, #{$secondAction}-#{$direction};
+        } @else{
+          animation-name: #{$firstAction}-#{$movement}, #{$secondAction}-#{$movement}-#{$direction};
+        }
+        @content;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,11 @@
+@import "../mixin/create-rule";
+@include create-condition-rules(fade, slide, in, (right, left, top, bottom), and);
+@include create-condition-rules(slide, fade, (right, left, top, bottom), out, and);
+@include create-condition-rules(fade, slide, in, (right, left, top, bottom), then){
+  animation-delay: 0s, var(--simple-animation-duration);
+  animation-duration: var(--simple-animation-duration), calc(var(--simple-animation-duration) * 2);
+};
+@include create-condition-rules(slide, fade, (right, left, top, bottom), out, then){
+  animation-delay: 0s, var(--simple-animation-duration);
+  animation-duration: var(--simple-animation-duration), calc(var(--simple-animation-duration) * 2);
+};

@@ -1,10 +1,11 @@
 {
-  "name": "simple-animation",
-  "version": "0.0.0",
+  "name": "@simple-utilities/simple-animation",
+  "version": "0.1.0",
   "description": "A simple animation library for CSS and JS/TS projects.",
   "type": "module",
   "main": "dist/simple-animation.umd.js",
   "module": "dist/simple-animation.js",
+  "style": "dist/simple-animation.css",
   "exports": {
     ".": {
       "import": "./dist/simple-animation.js",
@@ -12,21 +13,26 @@
     }
   },
   "files": [
-    "dist/simple-animation.css",
-    "dist/simple-animation.js",
-    "dist/simple-animation.umd.js"
+    "dist"
   ],
   "scripts": {
     "dev": "npm run build:dev && vite --host",
     "build": "tsc && vite build",
     "build:dev": "tsc && vite build --config vite.config.dev.js"
   },
+  "browserslist": [
+    "> 3%",
+    "last 2 versions"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vigoren/Vanimation.git"
+    "url": "git+https://github.com/vigoren/simple-animation.git"
   },
   "keywords": [
-    "animation"
+    "animation",
+    "css",
+    "javascript",
+    "typescript"
   ],
   "author": "Dean Vigoren (Vigorator)",
   "license": "GPL-3.0",
@@ -37,6 +43,9 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "cssnano-preset-advanced": "^6.0.1",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-prettier": "^5.0.0",

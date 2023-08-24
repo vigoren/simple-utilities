@@ -1,0 +1,5 @@
+@import "../mixin/create-rule";
+@include create-rules((collapse, expand)){
+  transform-origin: top left;
+  overflow: hidden;
+};

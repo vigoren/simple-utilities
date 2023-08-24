@@ -1,7 +1,6 @@
-export default class SimpleAnimation {
-    constructor() {}
+import "../styles/index.scss";
+import { Collapse } from "./classes/collapse";
 
-    test() {
-        console.log("Simple Animation test");
-    }
-}
+export { Collapse };
+
+Collapse.initialize();
