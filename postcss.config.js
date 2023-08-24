@@ -1,14 +1,14 @@
-export default (ctx) => {
+module.exports = (ctx) => {
     return {
         map: ctx.map,
         parser: ctx.parser,
         plugins: {
-            "autoprefixer": {},
+            autoprefixer: {},
             "postcss-prefixer": {
                 prefix: "sa-",
                 ignore: [/simple-/]
             },
-            "cssnano": {
+            cssnano: {
                 preset: "advanced"
             }
 

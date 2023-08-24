@@ -2,14 +2,14 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    root: "src",
+    base: "./",
     build: {
-        outDir: "../dist",
+        //outDir: "../dist",
         emptyOutDir: true,
         minify: true,
         reportCompressedSize: true,
         lib: {
-            entry: resolve(__dirname, "src/index.ts"),
+            entry: resolve(__dirname, "src/scripts/index.ts"),
             name: "SimpleAnimation",
             fileName: "simple-animation"
         },
