@@ -51,7 +51,7 @@ class AnimationExample extends React.Component {
         const button = e.target;
         if (button) {
             const animation = button.dataset.animation;
-            const preview = button.previousSibling;
+            const preview = button.previousSibling.firstChild;
             if (animation && preview) {
                 preview.classList.remove(animation);
                 preview.offsetWidth;
@@ -73,8 +73,10 @@ class AnimationExample extends React.Component {
             <>
                 <div className={styles.exampleContainer}>
                     <div className={styles.animation}>
-                        <div data-preview="true" className={`${styles.preview} simple-animation ${finalClass}`}>
-                            {this.state.text}
+                        <div className={styles.previewWrapper}>
+                            <div data-preview="true" className={`${styles.preview} simple-animation ${finalClass}`}>
+                                {this.state.text}
+                            </div>
                         </div>
                         <button type="button" data-animation={this.state.animation} onClick={this.runAnimation}>
                             Run Animation
