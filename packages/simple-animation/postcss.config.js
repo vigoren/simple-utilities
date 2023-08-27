@@ -1,4 +1,4 @@
-module.exports = (ctx) => {
+export default (ctx) => {
     return {
         map: ctx.map,
         parser: ctx.parser,

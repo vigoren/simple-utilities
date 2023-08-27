@@ -6,11 +6,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npx lerna run build"
+    "build": "npx lerna run build",
+    "publish": "npx lerna publish from-package --ignore documentation",
+    "start:documentation": "npx lerna run start --scope documentation"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vigoren/simple-utilities.git"
+    "url": "git+https://github.com/vigoren/simple-web-utilities.git"
   },
   "keywords": [
     "animation",

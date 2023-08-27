@@ -1,13 +1,9 @@
-# Simple Animation
+# Simple Utilities
 
-A simple animation library for CSS and JS/TS projects. 
+This is a group of utilities for web based projects.
 
-This library is intended to have a small number of commonly used animations that can be easily incorporated into other projects. As such keeping the overall size of the library small is a priority.
+The goal of these utilities is to provide easy to use functionality to be used in projects.
 
-Most of the animations are CSS only. The JavaScript/TypeScript animations are added to allow for more complex animations that are not possible with CSS alone.
+## Utilities
 
-## Installation
-
-```bash
-npm install @simple-utilities/simple-animation
-```
+- [Simple Animations](./packages/simple-animation/README.md): A simple animation library using mainly CSS with minimal JavaScript.
