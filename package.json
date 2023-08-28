@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "npx lerna run build",
-    "publish": "npx lerna publish from-package --ignore documentation",
+    "publish": "npx lerna publish from-package --no-private",
     "start:documentation": "npx lerna run start --scope documentation"
   },
   "repository": {
