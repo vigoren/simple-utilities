@@ -5,8 +5,7 @@
         "version": {
             "allowBranch": ["main", "development"],
             "signGitCommit": true,
-            "conventionalCommits": true,
-            "changelogPreset": "angular"
+            "conventionalCommits": false
         }
     }
 }
