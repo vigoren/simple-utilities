@@ -7,8 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @simple-web-utilities/simple-animation
 
-# Simple Animation Changelog
-
 ## 1.0.0 - Initial Release
 
 The initial release of Simple Animation.
