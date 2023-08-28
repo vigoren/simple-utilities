@@ -2,13 +2,12 @@
   "name": "@simple-web-utilities/root",
   "version": "0.1.0",
   "description": "A collection of simple libraries and tools for web development.",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "build": "npx lerna run build",
-    "publish": "npx lerna publish from-package --no-private",
+    "publish": "npx lerna publish from-package",
     "start:documentation": "npx lerna run start --scope documentation"
   },
   "repository": {
