@@ -27,8 +27,8 @@ export class Collapse {
             if (parent) {
                 const target = <HTMLElement>document.querySelector(parent.dataset.saCollapse || "");
                 if (target) {
-                    target.classList.toggle("sa-collapse");
-                    target.classList.toggle("sa-expand");
+                    target.classList.toggle("sa-collapse-up");
+                    target.classList.toggle("sa-expand-down");
                 }
             }
         }
