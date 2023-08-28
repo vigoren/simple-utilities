@@ -22,6 +22,9 @@
         "type": "git",
         "url": "git+https://github.com/vigoren/simple-web-utilities.git"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "keywords": [
         "animation",
         "css",
@@ -34,5 +37,5 @@
         "url": "https://github.com/vigoren/simple-web-utilities/issues"
     },
     "homepage": "https://github.com/vigoren/simple-web-utilities/packages/simple-animation#readme",
-    "gitHead": "7763d188df8c8401680a5bd3cf133f84835d124c"
+    "gitHead": "f0cbe415e273a71c7acf23ab84e3b6662e063d6a"
 }
