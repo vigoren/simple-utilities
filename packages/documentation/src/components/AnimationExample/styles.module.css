@@ -8,6 +8,7 @@
     border: 1px solid var(--ifm-color-emphasis-300);
     border-top-left-radius: var(--ifm-pagination-nav-border-radius);
     border-top-right-radius: var(--ifm-pagination-nav-border-radius);
+    margin-top: 2rem;
 }
 
 .code{
@@ -43,6 +44,16 @@
     margin-bottom: 1rem;
     text-align: center;
     height: 100%;
+}
+
+.exampleContainer .animation .preview.expandExample{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.exampleContainer .animation .preview ul{
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .exampleContainer .animation button{

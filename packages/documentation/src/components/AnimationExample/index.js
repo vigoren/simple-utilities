@@ -3,10 +3,14 @@ import styles from "./styles.module.css";
 import CodeBlock from "@theme/CodeBlock";
 
 class AnimationExample extends React.Component {
+    expandExample;
+    collapseExample;
     constructor(props) {
         super(props);
         const animation = props.animation || "";
         const text = props.text || "";
+        this.expandExample = props.expandExample || false;
+        this.collapseExample = props.collapseExample || false;
 
         this.state = { animation: animation, text: text, duration: "", repeat: "", delay: "" };
     }
@@ -74,8 +78,21 @@ class AnimationExample extends React.Component {
                 <div className={styles.exampleContainer}>
                     <div className={styles.animation}>
                         <div className={styles.previewWrapper}>
-                            <div data-preview="true" className={`${styles.preview} simple-animation ${finalClass}`}>
-                                {this.state.text}
+                            <div
+                                data-preview="true"
+                                className={`${styles.preview} simple-animation ${finalClass} ${this.expandExample ? styles.expandExample : ""}`}
+                            >
+                                {this.expandExample || this.collapseExample ? (
+                                    <ul>
+                                        <li>Item 1</li>
+                                        <li>Item 2</li>
+                                        <li>Item 3</li>
+                                        <li>Item 4</li>
+                                        <li>Item 5</li>
+                                    </ul>
+                                ) : (
+                                    this.state.text
+                                )}
                             </div>
                         </div>
                         <button type="button" data-animation={this.state.animation} onClick={this.runAnimation}>
