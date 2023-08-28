@@ -20,6 +20,7 @@ const config = {
     // If you aren't using GitHub pages, you don't need these.
     organizationName: "vigoren", // Usually your GitHub org/user name.
     projectName: "simple-web-utilities", // Usually your repo name.
+    trailingSlash: true,
 
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
