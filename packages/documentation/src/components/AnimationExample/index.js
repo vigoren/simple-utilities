@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import CodeBlock from "@theme/CodeBlock";
-
-import { Collapse } from "@simple-web-utilities/simple-animation";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 class AnimationExample extends React.Component {
     expandExample;
@@ -54,6 +53,7 @@ class AnimationExample extends React.Component {
     }
 
     runAnimation(e) {
+        const Collapse = require("@simple-web-utilities/simple-animation").Collapse;
         Collapse.initialize();
         const button = e.target;
         if (button) {
@@ -77,7 +77,7 @@ class AnimationExample extends React.Component {
             finalClass = " " + finalClass;
         }
         return (
-            <>
+            <div>
                 <div className={styles.exampleContainer}>
                     <div className={styles.animation}>
                         <div className={styles.previewWrapper}>
@@ -145,7 +145,7 @@ class AnimationExample extends React.Component {
                         showLineNumbers
                     >{`<div className="simple-animation ${this.state.animation}${finalClass}">${this.state.text}</div>`}</CodeBlock>
                 </div>
-            </>
+            </div>
         );
     }
 }

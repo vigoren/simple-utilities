@@ -1,6 +1,6 @@
 # Collapse
 
-This helper enhances the [expand/collapse animations](../css-animations/expand-collapse) which are used to expand or collapse an element.
+This helper enhances the [expand/collapse animations](../css-animations/expand-collapse.mdx) which are used to expand or collapse an element.
 
 This helper will set the `--simple-animation-collapse-max-height` CSS variable to the height of the element. This will ensure that when the element is being animated the correct height is used.
 
