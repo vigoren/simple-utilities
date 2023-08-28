@@ -1,13 +1,7 @@
 # Simple Animation
 
-A simple animation library for CSS and JS/TS projects. 
+A simple CSS animation library with JavaScript helpers that can be used to enhance certain animations.
 
-This library is intended to have a small number of commonly used animations that can be easily incorporated into other projects. As such keeping the overall size of the library small is a priority.
+The goal of this library is to provide common animations used in larger applications.
 
-Most of the animations are CSS only. The JavaScript/TypeScript animations are added to allow for more complex animations that are not possible with CSS alone.
-
-## Installation
-
-```bash
-npm install @simple-utilities/simple-animation
-```
+Check out the [documentation](https://vigoren.github.io/simple-web-utilities/docs/simple-animation/) for full details.
