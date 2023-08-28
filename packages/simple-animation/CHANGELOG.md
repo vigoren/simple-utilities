@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/vigoren/simple-web-utilities/compare/@simple-web-utilities/simple-animation@0.2.0...@simple-web-utilities/simple-animation@0.2.1) (2023-08-28)
+
+**Note:** Version bump only for package @simple-web-utilities/simple-animation
+
 # 0.2.0 (2023-08-28)
 
 -   FEAT!: Removed the fade-in-then... style classes as they don't really make sense in practical applications. ([4510c59](https://github.com/vigoren/simple-web-utilities/commit/4510c5909130e23578ffc3e00563c2ba12d57c46))
