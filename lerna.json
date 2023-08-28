@@ -5,7 +5,7 @@
         "version": {
             "allowBranch": ["main", "development"],
             "signGitCommit": true,
-            "conventionalCommits": false
+            "conventionalCommits": true
         }
     }
 }
