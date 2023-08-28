@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./styles.module.css";
 import CodeBlock from "@theme/CodeBlock";
 
+import { Collapse } from "@simple-web-utilities/simple-animation";
+
 class AnimationExample extends React.Component {
     expandExample;
     collapseExample;
@@ -52,6 +54,7 @@ class AnimationExample extends React.Component {
     }
 
     runAnimation(e) {
+        Collapse.initialize();
         const button = e.target;
         if (button) {
             const animation = button.dataset.animation;
@@ -80,7 +83,9 @@ class AnimationExample extends React.Component {
                         <div className={styles.previewWrapper}>
                             <div
                                 data-preview="true"
-                                className={`${styles.preview} simple-animation ${finalClass} ${this.expandExample ? styles.expandExample : ""}`}
+                                className={`${styles.preview} simple-animation ${finalClass} ${
+                                    this.expandExample ? styles.expandExample : this.collapseExample ? styles.collapseExample : ""
+                                }`}
                             >
                                 {this.expandExample || this.collapseExample ? (
                                     <ul>
@@ -95,7 +100,14 @@ class AnimationExample extends React.Component {
                                 )}
                             </div>
                         </div>
-                        <button type="button" data-animation={this.state.animation} onClick={this.runAnimation}>
+                        <button
+                            type="button"
+                            data-animation={this.state.animation}
+                            onClick={this.runAnimation}
+                            data-sa-collapse={
+                                this.expandExample ? `.${styles.expandExample}` : this.collapseExample ? `.${styles.collapseExample}` : ""
+                            }
+                        >
                             Run Animation
                         </button>
                     </div>

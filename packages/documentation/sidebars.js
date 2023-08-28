@@ -15,14 +15,13 @@
 const sidebars = {
     // By default, Docusaurus generates a sidebar from the docs folder structure
     simpleAnimationSidebar: [
-        "simple-animation/getting-started",
+        "simple-animation/index",
         {
             type: "category",
             label: "CSS Animations",
             link: {
-                type: "generated-index",
-                title: "CSS Animations",
-                description: "Below are a list of all CSS animations available in Simple Animation."
+                type: "doc",
+                id: "simple-animation/css-animations/index"
             },
             items: [
                 "simple-animation/css-animations/fade",
@@ -38,8 +37,9 @@ const sidebars = {
                 type: "doc",
                 id: "simple-animation/javascript-helpers/index"
             },
-            items: []
-        }
+            items: ["simple-animation/javascript-helpers/collapse"]
+        },
+        "simple-animation/utility-classes"
     ]
 
     // But you can create a sidebar manually

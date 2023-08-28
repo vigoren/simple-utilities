@@ -51,6 +51,10 @@
     overflow: hidden;
 }
 
+.exampleContainer .animation .preview.collapseExample{
+
+}
+
 .exampleContainer .animation .preview ul{
     width: fit-content;
     margin: 0 auto;

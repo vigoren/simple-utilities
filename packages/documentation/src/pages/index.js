@@ -30,7 +30,7 @@ export default function Home() {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <FeatureBlock title="Simple Animation" link="docs/simple-animation/getting-started">
+                                <FeatureBlock title="Simple Animation" link="docs/simple-animation">
                                     <p>Simple Animation is a library that provides ways to animate elements on a web page.</p>
                                 </FeatureBlock>
                             </div>
