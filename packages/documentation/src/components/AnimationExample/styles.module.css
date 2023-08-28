@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    background-color: var(--ifm-color-emphasis-100);
     border: 1px solid var(--ifm-color-emphasis-300);
     border-top-left-radius: var(--ifm-pagination-nav-border-radius);
     border-top-right-radius: var(--ifm-pagination-nav-border-radius);
@@ -45,7 +46,7 @@
 }
 
 .exampleContainer .animation button{
-    background: var(--prism-background-color);
+    background-color: var(--ifm-color-success-lightest);;
     color: var(--prism-color);
     border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ifm-global-radius);
@@ -55,7 +56,13 @@
     margin-left: 50%;
 }
 .exampleContainer .animation button:hover{
-    background: var(--ifm-color-emphasis-300);
+    background: var(--ifm-color-success-light);
+}
+[data-theme=dark] .exampleContainer .animation button{
+    background-color: var(--ifm-color-success-darkest);
+}
+[data-theme=dark] .exampleContainer .animation button:hover{
+    background: var(--ifm-color-success-dark);
 }
 
 .exampleContainer .options{
@@ -64,6 +71,8 @@
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 1rem 0.5rem;
+    background-color: var(--ifm-color-info-contrast-background);
+    border-left: 1px solid var(--ifm-color-emphasis-300);
 }
 
 .exampleContainer .options .title {
@@ -71,11 +80,11 @@
     top: -1rem;
     padding: 0 0.25rem;
     border: 1px solid var(--ifm-color-emphasis-300);
-    background-color: #ffffff;
+    background-color: var(--ifm-color-info-lightest);
     font-weight: 600;
 }
 [data-theme=dark] .exampleContainer .options .title {
-    background-color: var(--ifm-background-color);
+    background-color: var(--ifm-color-info-darkest);
 }
 
 .exampleContainer .options .group{
