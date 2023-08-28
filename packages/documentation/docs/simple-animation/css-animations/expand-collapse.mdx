@@ -1,0 +1,33 @@
+import AnimationExample from '@site/src/components/AnimationExample';
+
+# Expand / Collapse
+
+These animations allow the expanding and collapsing of elements.
+
+## Expand Down
+
+Expand an element down from the top to its full height.
+
+:::info
+
+Unless the [JavasScript Helpers](../javascript-helpers) have been included this animation will expand the element down to a max height of 1000px. This can cause the animation to appear to run too quickly for short elements. Including the [Collapse JavasScript Helper](../javascript-helpers/collapse) will set the correct max height for the element.
+
+Optionally you can set the max height of the element manually by setting the `--simple-animation-collapse-max-height` CSS variable on the element.
+
+:::
+
+<AnimationExample animation="sa-expand-down" expandExample />
+
+## Collapse Up
+
+Collapse an element up from its full height to the top.
+
+:::info
+
+Unless the [JavasScript Helpers](../javascript-helpers) have been included this animation will collapse the element up from a max height of 1000px. This can cause the animation to appear to be delayed before running for short elements. Including the [Collapse JavasScript Helper](../javascript-helpers/collapse) will set the correct max height for the element.
+
+Optionally you can set the max height of the element manually by setting the `--simple-animation-collapse-max-height` CSS variable on the element.
+
+:::
+
+<AnimationExample animation="sa-collapse-up" collapseExample />

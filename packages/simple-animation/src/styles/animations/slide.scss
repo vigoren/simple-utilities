@@ -1,0 +1,2 @@
+@import "../mixin/create-rule";
+@include create-rules(slide, (in, out), (right, left, top, bottom));

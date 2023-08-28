@@ -1,0 +1,13 @@
+$root: (
+    duration: 1s,
+    delay: 1s,
+    repeat: 1,
+    collapse-max-height: 1000px
+);
+
+
+:root{
+    @each $prop, $value in $root {
+      --simple-animation-#{$prop}: #{$value};
+    }
+}

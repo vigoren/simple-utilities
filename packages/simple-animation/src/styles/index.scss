@@ -1,0 +1,53 @@
+@import "variables";
+@import "keyframes/fade";
+@import "keyframes/slide";
+@import "keyframes/expand-collapse";
+
+.simple-animation{
+  animation-duration: var(--simple-animation-duration, 1s);
+  animation-fill-mode: both;
+
+  &.delay{
+    animation-delay: var(--simple-animation-delay, 1s);
+  }
+
+
+  &.repeat{
+    animation-iteration-count: var(--simple-animation-repeat, 1);
+  }
+  &.infinite{
+    animation-iteration-count: infinite;
+  }
+
+  &.duration-quarter{
+    animation-duration: calc(var(--simple-animation-duration) * 0.25);
+  }
+  &.duration-third{
+    animation-duration: calc(var(--simple-animation-duration) * 0.33);
+  }
+  &.duration-half{
+    animation-duration: calc(var(--simple-animation-duration) * 0.5);
+  }
+  &.duration-double{
+    animation-duration: calc(var(--simple-animation-duration) * 2);
+  }
+  &.duration-triple{
+    animation-duration: calc(var(--simple-animation-duration) * 3);
+  }
+  &.duration-quadruple{
+    animation-duration: calc(var(--simple-animation-duration) * 4);
+  }
+
+  @import "animations/fade";
+  @import "animations/slide";
+  @import "animations/fade-and-slide";
+  @import "animations/expand-collapse";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .simple-animation {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "@simple-web-utilities/simple-animation",
+    "version": "0.2.0",
+    "description": "A simple animation library for CSS and JS/TS projects.",
+    "type": "module",
+    "main": "dist/simple-animation.umd.js",
+    "module": "dist/simple-animation.js",
+    "style": "dist/simple-animation.css",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "npm run build:dev && vite --host",
+        "build": "tsc && vite build",
+        "build:dev": "tsc && vite build --config vite.config.dev.js"
+    },
+    "browserslist": [
+        "> 3%",
+        "last 2 versions"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vigoren/simple-web-utilities.git"
+    },
+    "keywords": [
+        "animation",
+        "css",
+        "javascript",
+        "typescript"
+    ],
+    "author": "Dean Vigoren (Vigorator)",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/vigoren/simple-web-utilities/issues"
+    },
+    "homepage": "https://github.com/vigoren/simple-web-utilities/packages/simple-animation#readme"
+}
