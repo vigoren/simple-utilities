@@ -1,4 +1,4 @@
-@keyframes expand {
+@keyframes expand-down {
   0% {
     max-height: 0;
   }
@@ -6,7 +6,7 @@
     max-height: var(--simple-animation-collapse-max-height);
   }
 }
-@keyframes collapse {
+@keyframes collapse-up {
   0% {
     max-height: var(--simple-animation-collapse-max-height);
   }
