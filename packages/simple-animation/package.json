@@ -1,6 +1,6 @@
 {
     "name": "@simple-web-utilities/simple-animation",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A simple animation library for CSS and JS/TS projects.",
     "type": "module",
     "main": "dist/simple-animation.umd.js",
