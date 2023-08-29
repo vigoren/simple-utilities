@@ -7,8 +7,9 @@
   ],
   "scripts": {
     "build": "npx lerna run build",
+    "version": "npx lerna version --no-private",
     "publish": "npx lerna publish from-package",
-    "start:documentation": "npx lerna run start --scope documentation"
+    "start:documentation": "npx lerna run start --scope @simple-web-utilities/documentation"
   },
   "repository": {
     "type": "git",
