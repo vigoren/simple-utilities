@@ -5,7 +5,7 @@ import Layout from "@theme/Layout";
 
 import styles from "./index.module.css";
 
-import { version as SimpleAnimationVersion } from "../../../simple-animation/package.json";
+import { version as SimpleAnimationVersion } from "../../../../packages/simple-animation/package.json";
 import FeatureBlock from "../components/FeatureBlock";
 
 function HomepageHeader() {

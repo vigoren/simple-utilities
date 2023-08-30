@@ -7,10 +7,10 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "npx lerna run build",
+    "build": "npx turbo build",
     "version": "npx lerna version --no-private",
-    "publish": "npx lerna publish from-package",
-    "start:documentation": "npx lerna run start --scope @simple-web-utilities/documentation"
+    "publish-package": "npx lerna publish from-package",
+    "start:documentation": "npx turbo dev --filter=@simple-web-utilities/documentation"
   },
   "repository": {
     "type": "git",
