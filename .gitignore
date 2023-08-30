@@ -1,6 +1,9 @@
 #JetBrains IDE
 .idea
 
+#TurboRepo
+.turbo
+
 # Logs
 logs
 *.log
