@@ -6,6 +6,9 @@
       "outputs": ["dist/**"]
     },
     "lint": {},
+    "release": {
+      "dependsOn": ["build", "lint"]
+    },
     "dev": {
       "cache": false,
       "persistent": true

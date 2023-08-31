@@ -10,9 +10,7 @@
         "dist"
     ],
     "scripts": {
-        "dev": "npm run build:dev && vite --host",
-        "build": "tsc && vite build",
-        "build:dev": "tsc && vite build --config vite.config.dev.js"
+        "build": "tsc && vite build"
     },
     "browserslist": [
         "> 3%",

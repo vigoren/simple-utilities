@@ -8,8 +8,10 @@
   ],
   "scripts": {
     "build": "npx turbo build",
-    "version": "npx lerna version --no-private",
-    "publish-package": "npx lerna publish from-package",
+    "dev": "npx turbo dev",
+    "changeset": "npx changeset",
+    "version": "npx changeset version",
+    "release": "npx turbo release && changeset version && changeset publish",
     "start:documentation": "npx turbo dev --filter=@simple-web-utilities/documentation"
   },
   "repository": {
