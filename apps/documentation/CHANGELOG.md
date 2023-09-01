@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.1.3
+
+### Patch Changes
+
+-   605f048: Added documentation about the `sa-collapsed` class to start elements as collapsed.
+-   Updated dependencies [a445435]
+    -   @simple-web-utilities/simple-animation@1.2.2
+
 ## 1.1.2
 
 ### Patch Changes
