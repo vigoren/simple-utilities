@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+-   37b2043: Added missing types file for use when importing into TS project.
+
 ## 1.2.0
 
 ### Minor Changes
