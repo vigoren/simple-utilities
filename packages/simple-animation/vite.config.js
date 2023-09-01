@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import banner from "vite-plugin-banner";
+import dts from "vite-plugin-dts";
 
 import { name, version, description, author } from "./package.json";
 
@@ -39,6 +40,7 @@ export default defineConfig({
                       
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see https://www.gnu.org/licenses/.
-`)
+`),
+        dts({ rollupTypes: true })
     ]
 });

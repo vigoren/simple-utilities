@@ -6,6 +6,7 @@
     "main": "dist/simple-animation.umd.js",
     "module": "dist/simple-animation.js",
     "style": "dist/simple-animation.css",
+    "types": "dist/simple-animation.d.ts",
     "files": [
         "dist"
     ],
