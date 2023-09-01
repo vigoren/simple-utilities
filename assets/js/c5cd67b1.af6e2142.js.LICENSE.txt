@@ -1,5 +1,5 @@
 /*! 
-    @simple-web-utilities/simple-animation v1.2.0: A simple animation library for CSS and JS/TS projects.
+    @simple-web-utilities/simple-animation v1.2.1: A simple animation library for CSS and JS/TS projects.
     Copyright (C) 2023 Dean Vigoren (Vigorator)
                       
     This program is free software: you can redistribute it and/or modify
