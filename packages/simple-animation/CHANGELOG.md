@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+-   bb204d1: Added new classes for rotating elements around their center. Rotations can go right (clockwise) or left (counter-clockwise) and either a quarter (90 degrees), half (180 degrees), three quarters (270 degrees) or full (360 degrees) around.
+
+### Patch Changes
+
+-   b0fe99e: Added license details to all generated files.
+
 ## 1.1.1
 
 ### Patch Changes
