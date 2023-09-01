@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.1.2
+
+### Patch Changes
+
+-   37b2043: Added missing types file for use when importing into TS project.
+-   Updated dependencies [37b2043]
+    -   @simple-web-utilities/simple-animation@1.2.1
+
 ## 1.1.1
 
 ### Patch Changes
