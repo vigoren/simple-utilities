@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.1
+
+### Patch Changes
+
+-   8f1c96e: Fixed a missing license file issue.
+
 ## 1.1.0
 
 ### Minor Changes
