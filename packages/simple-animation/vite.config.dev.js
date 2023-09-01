@@ -12,7 +12,7 @@ export default defineConfig({
         minify: true,
         reportCompressedSize: true,
         lib: {
-            entry: resolve(__dirname, "src/scripts/index.ts"),
+            entry: resolve(__dirname, "src/index.html"),
             name: "SimpleAnimation",
             fileName: "simple-animation"
         },

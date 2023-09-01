@@ -2,6 +2,7 @@
 @import "keyframes/fade";
 @import "keyframes/slide";
 @import "keyframes/expand-collapse";
+@import "keyframes/rotate";
 
 .simple-animation{
   animation-duration: var(--simple-animation-duration, 1s);
@@ -42,6 +43,7 @@
   @import "animations/slide";
   @import "animations/fade-and-slide";
   @import "animations/expand-collapse";
+  @import "animations/rotate";
 }
 
 @media (prefers-reduced-motion: reduce) {

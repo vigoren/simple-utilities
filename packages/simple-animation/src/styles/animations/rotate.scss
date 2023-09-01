@@ -1,0 +1,13 @@
+@import "../mixin/create-rule";
+@include create-rules(rotate-full, (right, left)){
+  animation-timing-function: linear;
+};
+@include create-rules(rotate-quarter, (right, left)){
+  animation-timing-function: linear;
+};
+@include create-rules(rotate-half, (right, left)){
+  animation-timing-function: linear;
+};
+@include create-rules(rotate-three-quarters, (right, left)){
+  animation-timing-function: linear;
+};

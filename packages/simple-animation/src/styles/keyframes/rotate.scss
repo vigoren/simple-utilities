@@ -1,0 +1,40 @@
+@keyframes rotate-full-right {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-full-left {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rotate-quarter-right {
+    to {
+        transform: rotate(90deg);
+    }
+}
+@keyframes rotate-quarter-left {
+    to {
+        transform: rotate(-90deg);
+    }
+}
+@keyframes rotate-half-right {
+    to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotate-half-left {
+    to {
+        transform: rotate(-180deg);
+    }
+}
+@keyframes rotate-three-quarters-right {
+    to {
+        transform: rotate(270deg);
+    }
+}
+@keyframes rotate-three-quarters-left {
+    to {
+        transform: rotate(-270deg);
+    }
+}

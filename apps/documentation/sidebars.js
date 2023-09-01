@@ -27,6 +27,7 @@ const sidebars = {
                 "simple-animation/css-animations/fade",
                 "simple-animation/css-animations/slide",
                 "simple-animation/css-animations/fade-and-slide",
+                "simple-animation/css-animations/rotate",
                 "simple-animation/css-animations/expand-collapse"
             ]
         },
