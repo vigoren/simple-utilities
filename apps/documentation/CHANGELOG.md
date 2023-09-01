@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.1.1
+
+### Patch Changes
+
+-   bb204d1: Added documentation for simple-animation's new rotate classes.
+-   Updated dependencies [bb204d1]
+-   Updated dependencies [b0fe99e]
+    -   @simple-web-utilities/simple-animation@1.2.0
+
 ## 1.1.0
 
 ### Minor Changes
