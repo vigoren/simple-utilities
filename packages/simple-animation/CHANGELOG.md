@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.3
+
+### Patch Changes
+
+-   a1252c5: Fixed an issue where if the `Collapse.initialize()` function was called multiple times the click event would get added again to existing elements and cause weird behaviour.
+
 ## 1.2.2
 
 ### Patch Changes
