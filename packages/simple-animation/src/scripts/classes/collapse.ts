@@ -2,13 +2,14 @@ export class Collapse {
     constructor() {}
 
     static initialize() {
-        const collapses = this.#findAllCollapses();
+        const collapses = Collapse.#findAllCollapses();
         collapses.forEach((collapse) => {
-            collapse.addEventListener("click", this.#toggleCollapse.bind(this));
+            collapse.removeEventListener("click", Collapse.#toggleCollapse);
+            collapse.addEventListener("click", Collapse.#toggleCollapse);
             if ((<HTMLElement>collapse).dataset.saCollapse) {
                 const target = <HTMLElement>document.querySelector((<HTMLElement>collapse).dataset.saCollapse || "");
                 if (target) {
-                    target.style.setProperty("--simple-animation-collapse-max-height", this.#getTargetHeight(target));
+                    target.style.setProperty("--simple-animation-collapse-max-height", Collapse.#getTargetHeight(target));
                 }
             }
         });
