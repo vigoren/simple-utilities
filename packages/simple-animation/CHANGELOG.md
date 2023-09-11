@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.2
+
+### Patch Changes
+
+-   a445435: Added a class `sa-collapsed` that will start elements off as collapsed. Also updated the Collapse JS function to take advantage of this class when determening if an element should expand or collapse. This fixes several issues around having elements start collapsed.
+
 ## 1.2.1
 
 ### Patch Changes
