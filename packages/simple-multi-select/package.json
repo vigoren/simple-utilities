@@ -1,0 +1,40 @@
+{
+    "name": "@simple-web-utilities/simple-multi-select",
+    "version": "0.0.0",
+    "description": "A basic multiple select input.",
+    "type": "module",
+    "main": "dist/simple-multi-select.umd.js",
+    "module": "dist/simple-multi-select.js",
+    "style": "dist/simple-multi-select.css",
+    "types": "dist/simple-multi-select.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "tsc && vite build --config vite.config.dev.js && vite --host"
+    },
+    "browserslist": [
+        "> 3%",
+        "last 2 versions"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vigoren/simple-web-utilities.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "scroll",
+        "library",
+        "javascript",
+        "typescript"
+    ],
+    "author": "Dean Vigoren (Vigorator)",
+    "license": "MPL-2.0",
+    "bugs": {
+        "url": "https://github.com/vigoren/simple-web-utilities/issues"
+    },
+    "homepage": "https://github.com/vigoren/simple-web-utilities/packages/simple-multi-select#readme"
+}
