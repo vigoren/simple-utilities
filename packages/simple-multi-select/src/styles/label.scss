@@ -1,0 +1,12 @@
+label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem calc(var(--simple-multi-select-font-size) * .75);
+  pointer-events: none;
+  border: 1px solid rgba(0,0,0,0);
+  transform-origin: 0 0;
+  font-size: var(--simple-multi-select-font-size);
+  color: var(--simple-multi-select-label-color);
+  transform: scale(0.85) translateY(-0.6rem) translateX(.15rem);
+}

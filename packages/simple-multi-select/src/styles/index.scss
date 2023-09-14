@@ -1,0 +1,10 @@
+@import "variables";
+.wrapper{
+  position: relative;
+  width: 100%;
+  margin: 0.5rem 0;
+
+  @import "button";
+  @import "options";
+  @import "label";
+}

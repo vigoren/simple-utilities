@@ -1,0 +1,42 @@
+@import "variables";
+
+.button{
+  border: 1px solid var(--simple-multi-select-border-color);
+  border-radius: var(--simple-multi-select-border-radius);
+  background-color: var(--simple-multi-select-bg-color);
+  color: var(--simple-multi-select-color);
+  font-size: var(--simple-multi-select-font-size);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 1.25;
+  padding: calc(var(--simple-multi-select-font-size) * 1.4) calc(var(--simple-multi-select-font-size) * .75) calc(var(--simple-multi-select-font-size) * .4) calc(var(--simple-multi-select-font-size) * .75);
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover, &:focus{
+    background-color: var(--simple-multi-select-hover-bg-color);
+    border-color: var(--simple-multi-select-hover-border-color);
+    box-shadow: var(--simple-multi-select-hover-box-shadow);
+    outline: 0;
+  }
+
+  .selected-items{
+    flex: 1;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .icon{
+    flex: 0 0 calc(var(--simple-multi-select-font-size) + 5px);
+    width:var(--simple-multi-select-font-size);
+    height: var(--simple-multi-select-font-size);
+    margin-left: 5px;
+    background-color: var(--simple-multi-select-color);
+    mask-image: url("../assets/chevron-down.svg");
+    mask-size: cover;
+  }
+}

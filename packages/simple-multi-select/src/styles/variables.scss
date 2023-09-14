@@ -1,0 +1,20 @@
+@import "mixins/sizing";
+
+:root{
+  --simple-multi-select-font-size: 1rem;
+  --simple-multi-select-label-color: rgba(0, 0, 0, 0.75);
+  --simple-multi-select-color: #000000;
+
+  --simple-multi-select-border-color: #9a9a9a;
+  --simple-multi-select-border-radius: 5px;
+  --simple-multi-select-bg-color: #FFFFFF;
+
+  --simple-multi-select-hover-border-color: #9a9a9a;
+  --simple-multi-select-hover-bg-color: #FFFFFF;
+  --simple-multi-select-hover-box-shadow: 0 0 0 0.125rem rgb(0 108 219 / 52%);
+
+  --simple-multi-select-option-bg-color: #FFFFFF;
+  --simple-multi-select-option-bg-hover-color: rgb(205, 218, 245);
+  --simple-multi-select-option-disabled-color: #4b4b4b;
+  --simple-multi-select-option-disabled-bg-color: #d9d9d9;
+}
