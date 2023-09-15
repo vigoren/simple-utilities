@@ -76,7 +76,7 @@ export class MultiSelect {
     get #buttonText() {
         const selectedOptions = this.#options
             .filter((o) => {
-                return o.selected;
+                return o.selected && !o.makeOthersMatch;
             })
             .map((o) => {
                 return o.text;
