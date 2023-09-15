@@ -9,4 +9,9 @@ label{
   font-size: var(--simple-multi-select-font-size);
   color: var(--simple-multi-select-label-color);
   transform: scale(0.85) translateY(-0.6rem) translateX(.15rem);
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
