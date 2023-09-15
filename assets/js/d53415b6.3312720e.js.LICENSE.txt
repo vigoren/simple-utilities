@@ -1,5 +1,5 @@
 /*! 
-    @simple-web-utilities/simple-multi-select v0.0.0: A basic multiple select input.
+    @simple-web-utilities/simple-multi-select v1.0.0: A basic multiple select input.
     Copyright (C) 2023 Dean Vigoren (Vigorator)
                       
     This Source Code Form is subject to the terms of the Mozilla Public
