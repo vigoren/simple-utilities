@@ -238,7 +238,7 @@ export function InitializeAllMultiSelects() {
     const initializedMultiSelects: MultiSelect[] = [];
     for (let i = 0; i < multiSelects.length; i++) {
         const multiSelect = multiSelects[i];
-        if (multiSelect instanceof HTMLSelectElement) {
+        if (multiSelect instanceof HTMLSelectElement && !multiSelect.parentElement?.classList.contains("sms-wrapper")) {
             let labelElement: HTMLLabelElement | null = null;
 
             //Find associated label element

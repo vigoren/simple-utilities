@@ -3,4 +3,4 @@ import { MultiSelect, InitializeAllMultiSelects } from "./classes/multi-select";
 
 export { MultiSelect, InitializeAllMultiSelects };
 
-InitializeAllMultiSelects();
+export const multiSelects = InitializeAllMultiSelects();
