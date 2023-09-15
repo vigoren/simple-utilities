@@ -34,7 +34,11 @@ export default function Home() {
                                     <p>Simple Animation is a library that provides ways to animate elements on a web page.</p>
                                 </FeatureBlock>
                             </div>
-                            <div className="col"></div>
+                            <div className="col">
+                                <FeatureBlock title="Simple Multi-Select" link="docs/simple-multi-select">
+                                    <p>Simple Multi-Select is a library that provides a simple way to create a multiple select dropdown.</p>
+                                </FeatureBlock>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -41,6 +41,20 @@ const sidebars = {
             items: ["simple-animation/javascript-helpers/collapse"]
         },
         "simple-animation/utility-classes"
+    ],
+    simpleMultiSelectSidebar: [
+        "simple-multi-select/index",
+        "simple-multi-select/html",
+        "simple-multi-select/css-variables",
+        {
+            type: "category",
+            label: "JavaScript",
+            link: {
+                type: "doc",
+                id: "simple-multi-select/javascript/index"
+            },
+            items: ["simple-multi-select/javascript/api/modules", "simple-multi-select/javascript/api/classes/MultiSelect"]
+        }
     ]
 
     // But you can create a sidebar manually

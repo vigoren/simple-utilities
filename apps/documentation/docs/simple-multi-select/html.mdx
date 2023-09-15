@@ -1,0 +1,86 @@
+# HTML Options
+
+The HTML for the multiple select is very simple. It is just a native select element with the `multiple` attribute set.
+
+```html
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+## Select Attributes
+
+There are several optional attributes that can be set on the native select element to customize the multiple select.
+
+### `data-none-selected-text`
+
+This attribute sets the text that is displayed when no options are selected. If this attribute is not set, the default text is `None Selected`.
+
+```html
+<select multiple data-none-selected-text="Select Options">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+### `data-label`
+
+If no label is associated with the native select element, this attribute can be used to set the label for the multiple select. This is the text shown above the selected options.
+
+```html
+<select multiple data-label="My Great Multiple Select">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+## Option Attributes
+
+There are several optional attributes that can be set on the option elements to customize the multiple select.
+
+### `disabled`
+
+This attribute can be set on an option element to disable it. Disabled options cannot be selected/unselected.
+
+```html
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2" disabled>Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+### `selected`
+
+This attribute can be set on an option element to select it by default. This attribute is only used when the multiple select is initialized. It is not used when the multiple select is updated.
+
+```html
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2" selected>Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+### `data-make-others-match`
+
+This attribute can be set on an option element to make other options match the selected state of this option. This is useful when you want to have a "Select All" option that selects all other options.
+
+:::info
+
+Options set with this attribute will not be included in any of the multiple selects values.
+
+:::
+
+```html
+<select multiple>
+  <option value="all" data-make-others-match>Select All</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```

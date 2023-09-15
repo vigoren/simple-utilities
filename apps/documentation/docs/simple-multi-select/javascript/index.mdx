@@ -1,0 +1,50 @@
+# JavaScript
+
+How to use the JavaScript library.
+
+## Initializing
+
+There are two ways to initialize the multiple select elements.
+
+### Initialize All
+
+The [`InitializeAllMultiSelects`](api/modules.md#initializeallmultiselects) function looks for every multiple select element on the page and initializes them. If the multiple select has already been initialized, it will be skipped.
+
+```javascript
+InitializeAllMultiSelects();
+```
+
+### Initialize Single
+
+The [`MultiSelect`](api/classes/MultiSelect.md) class can be used to initialize a single multiple select element. The constructor takes the native select element as a parameter.
+
+```javascript
+const multiSelect = new MultiSelect(document.getElementById("demo"));
+```
+
+## Getting Selected Values
+
+There are two ways to get the selected values from the multiple select.
+
+### Registering a Callback
+
+The [`MultiSelect`](api/classes/MultiSelect.md) class has a [`registerOnChangeCallback`](api/classes/MultiSelect.md#registeronchangecallback) function that can be used to register a callback function that will be called when the selected values change.
+
+It passes the multiple select id and the selected values to the callback function.
+
+```javascript
+const multiSelect = new MultiSelect(document.getElementById("demo"));
+multiSelect.registerOnChangeCallback((multiSelectId, values) => {
+  console.log(values);
+});
+```
+
+### Getting the Values
+
+The [`MultiSelect`](api/classes/MultiSelect.md) class has a [`selectedValues`](api/classes/MultiSelect.md#selectedvalues) get function that can be used to get the selected values.
+
+```javascript
+const multiSelect = new MultiSelect(document.getElementById("demo"));
+const values = multiSelect.selectedValues;
+console.log(values);
+```

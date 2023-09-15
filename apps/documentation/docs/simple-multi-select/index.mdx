@@ -1,0 +1,107 @@
+import MultiSelectExample from '@site/src/components/MultiSelectExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Simple Multi-Select
+
+A library to create simple multiple select elements. These multiple selects look similar to the native select element, but allow users to choose multiple options.
+
+This library uses both JavaScript and CSS. There are several [CSS Variables](css-variables) available to customize the look of the multiple select.
+
+## How It Works
+
+This library works by looking for native multiple select elements on a page and changing them into an easier to use multiple select. The native select element is hidden and a new element is created to replace it.
+
+Attributes set on the native select are used to drive how the new multiple select works.
+
+### Demo
+
+This is a small demo of Simple Multi-Select in action to give an idea on how it works.
+
+<MultiSelectExample id="demoms" />
+
+## Installation
+
+```bash
+npm install @simple-web-utilities/simple-multi-select
+```
+## Getting Started
+
+To get started make sure that you include the CSS and JavaScript on your page or into your project files.
+
+### HTML
+
+The HTML for the multiple select is very simple. It is just a native select element with the `multiple` attribute set.
+
+```html
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+For details about the available attributes and other options check out the [HTML Options](html).
+
+### CSS
+
+You can link to the css file directly or import it into your own css file.
+
+:::note
+
+It is encouraged to import the library into your own css file.
+
+:::
+
+
+<Tabs>
+  <TabItem value="file" label="CSS File">
+
+```html
+<link rel="stylesheet" href="node_modules/@simple-web-utilities/simple-multi-select/dist/simple-multi-select.css" />
+```
+
+  </TabItem>
+  <TabItem value="import" label="Import">
+
+```css
+@import '@simple-web-utilities/simple-multi-select/dist/simple-multi-select.css';
+```
+
+  </TabItem>
+</Tabs>
+
+For more options on customizing the CSS check out the available [CSS Variables](css-variables).
+
+#### Dark Mode
+
+This library supports dark mode by setting the `data-theme` attribute on the `html` element. The default theme is `light`. To use the dark theme set the `data-theme` attribute to `dark`.
+
+```html
+<html data-theme="dark">
+```
+
+
+### JavaScript
+
+Once you have the HTML for your multi-select element, the JavaScript need to be added to the page. This library is available as an ES Module and a UMD module.
+
+<Tabs>
+  <TabItem value="es" label="ES Module">
+
+```javascript
+import {MultiSelect, InitializeAllMultiSelects} from "@simple-web-utilities/simple-multi-select";
+```
+
+  </TabItem>
+  <TabItem value="umd" label="UMD">
+
+```javascript
+const { MultiSelect, InitializeAllMultiSelects } = require("@simple-web-utilities/simple-multi-select");
+```
+
+  </TabItem>
+</Tabs>
+
+Details about how to initialize the multi-selects and the available options can be found in the [JavaScript Options](javascript/index.mdx).
+
