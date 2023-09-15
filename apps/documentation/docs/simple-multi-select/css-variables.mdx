@@ -1,4 +1,7 @@
 import MultiSelectExample from '@site/src/components/MultiSelectExample';
+import ColorPreview from "../../src/components/ColorPreview";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # CSS Variables
 
@@ -10,67 +13,112 @@ Font size to use for the component. The size of the component scales with the fo
 
 **Default Value**: 1rem
 
-### Examples
+<Tabs>
+  <TabItem value="exFS1" label="Default">
 
-  ```css
-  :root {
-    --simple-multi-select-font-size: 1rem;
-  }
-  ```
 <MultiSelectExample id="exFS1" />
 
-  ```css
-  :root {
-    --simple-multi-select-font-size: 0.75rem;
-  }
-  ```
+```css
+:root {
+--simple-multi-select-font-size: 1rem;
+}
+```
+
+  </TabItem>
+  <TabItem value="exFS2" label="0.75rem">
+
 <div style={{ "--simple-multi-select-font-size": "0.75rem"}}>
   <MultiSelectExample id="exFS2" />
 </div>
 
-  ```css
-  :root {
-    --simple-multi-select-font-size: 2rem;
-  }
-  ```
+```css
+:root {
+--simple-multi-select-font-size: 0.75rem;
+}
+```
+
+  </TabItem>
+  <TabItem value="exFS3" label="2rem">
+
 <div style={{ "--simple-multi-select-font-size": "2rem"}}>
   <MultiSelectExample id="exFS3" />
 </div>
+
+```css
+:root {
+--simple-multi-select-font-size: 2rem;
+}
+```
+
+  </TabItem>
+</Tabs>
 
 
 ## --simple-multi-select-label-color
 
 Color of the title text for the select.
 
-**Default Value**: <div style={{backgroundColor: "rgba(0, 0, 0, 0.75)", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>rgba(0, 0, 0, 0.75)
+**Default Value**: <ColorPreview color="rgba(0, 0, 0, 0.75)" />
 
-### Examples
+<Tabs>
+  <TabItem value="exLC1" label="Default">
 
-  ```css
-  :root {
-    --simple-multi-select-label-color: rgba(255, 0, 0, 0.75);
-  }
-  ```
+<MultiSelectExample id="exLC1" />
+
+```css
+:root {
+--simple-multi-select-label-color: rgba(0, 0, 0, 0.75);
+}
+```
+
+  </TabItem>
+  <TabItem value="exLC2" label="Red">
+
 <div style={{ "--simple-multi-select-label-color": "rgba(255, 0, 0, 0.75)"}}>
-  <MultiSelectExample id="exLC1" />
+  <MultiSelectExample id="exLC2" />
 </div>
+
+```css
+:root {
+--simple-multi-select-label-color: rgba(255, 0, 0, 0.75);
+}
+```
+
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-color
 
 Color of the option and selected options text.
 
-**Default Value**: <div style={{backgroundColor: "#000000", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#000000
+**Default Value**: <ColorPreview color="#000000" />
 
-### Examples
+<Tabs>
+  <TabItem value="exC1" label="Default">
+
+<MultiSelectExample id="exC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-color: #000000;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="exC2" label="Red">
+
+<div style={{ "--simple-multi-select-color": "#ff0000"}}>
+  <MultiSelectExample id="exC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-color": "#ff0000"}}>
-    <MultiSelectExample id="exC1" />
-  </div>
+
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-border-radius
 
@@ -78,201 +126,369 @@ Border radius of the component.
 
 **Default Value**: 5px
 
-### Examples
+<Tabs>
+  <TabItem value="exBR1" label="Default">
+
+<MultiSelectExample id="exBR1" />
+
+  ```css
+  :root {
+    --simple-multi-select-border-radius: 5px;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exBR2" label="10px">
+
+<div style={{ "--simple-multi-select-border-radius": "10px"}}>
+  <MultiSelectExample id="exBR2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-border-radius: 10px;
   }
   ```
-
-  <div style={{ "--simple-multi-select-border-radius": "10px"}}>
-    <MultiSelectExample id="exBR1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-border-color
 
 Color of the border of the component.
 
-**Default Value**: <div style={{backgroundColor: "#9a9a9a", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#9a9a9a
+**Default Value**: <ColorPreview color="#9a9a9a" />
 
-### Examples
+<Tabs>
+  <TabItem value="exBC1" label="Default">
+
+<MultiSelectExample id="exBC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-border-color: #9a9a9a;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exBC2" label="Red">
+
+<div style={{ "--simple-multi-select-border-color": "#ff0000"}}>
+  <MultiSelectExample id="exBC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-border-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-border-color": "#ff0000"}}>
-    <MultiSelectExample id="exBC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-bg-color
 
 Background color of the component.
 
-**Default Value**: <div style={{backgroundColor: "#ffffff", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#ffffff
+**Default Value**: <ColorPreview color="#ffffff" />
 
-### Examples
+<Tabs>
+  <TabItem value="exBGC1" label="Default">
+
+<MultiSelectExample id="exBGC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-bg-color: #ffffff;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exBGC2" label="Red">
+
+<div style={{ "--simple-multi-select-bg-color": "#ff0000"}}>
+  <MultiSelectExample id="exBGC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-bg-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-bg-color": "#ff0000"}}>
-    <MultiSelectExample id="exBGC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-hover-border-color
 
 Color of the border of the component when hovered, or focused.
 
-**Default Value**: <div style={{backgroundColor: "#9a9a9a", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#9a9a9a
+**Default Value**: <ColorPreview color="#9a9a9a" />
 
-### Examples
+<Tabs>
+  <TabItem value="exHBC1" label="Default">
+
+<MultiSelectExample id="exHBC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-hover-border-color: #9a9a9a;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exHBC2" label="Red">
+
+<div style={{ "--simple-multi-select-hover-border-color": "#ff0000"}}>
+  <MultiSelectExample id="exHBC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-hover-border-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-hover-border-color": "#ff0000"}}>
-    <MultiSelectExample id="exHBC1" />
-  </div>
+  </TabItem>
+</Tabs>
+
 
 ## --simple-multi-select-hover-bg-color
 
 Background color of the component when hovered, or focused.
 
-**Default Value**: <div style={{backgroundColor: "#ffffff", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#ffffff
+**Default Value**: <ColorPreview color="#ffffff" />
 
-### Examples
+<Tabs>
+  <TabItem value="exHBGC1" label="Default">
+
+<MultiSelectExample id="exHBGC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-hover-bg-color: #ffffff;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exHBGC2" label="Red">
+
+<div style={{ "--simple-multi-select-hover-bg-color": "#ff0000"}}>
+  <MultiSelectExample id="exHBGC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-hover-bg-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-hover-bg-color": "#ff0000"}}>
-    <MultiSelectExample id="exHBGC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-hover-box-shadow
 
 Box shadow applied to the component when hovered, or focused.
 
-**Default Value**: 0 0 0 0.125rem <div style={{backgroundColor: "rgb(0 108 219 / 52%)", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>rgb(0 108 219 / 52%)
+**Default Value**: 0 0 0 0.125rem <ColorPreview color="rgb(0 108 219 / 52%)" />
 
-### Examples
+<Tabs>
+  <TabItem value="exHBS1" label="Default">
+
+<MultiSelectExample id="exHBS1" />
 
   ```css
   :root {
     --simple-multi-select-hover-box-shadow: 0 0 0 0.125rem #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-hover-box-shadow": "0 0 0 0.125rem #ff0000"}}>
-    <MultiSelectExample id="exHBS1" />
-  </div>
+  </TabItem>
+  <TabItem value="exHBS2" label="Red">
+
+<div style={{ "--simple-multi-select-hover-box-shadow": "0 0 0 0.125rem #ff0000"}}>
+  <MultiSelectExample id="exHBS2" />
+</div>
+
+  ```css
+  :root {
+    --simple-multi-select-hover-box-shadow: 0 0 0 0.125rem #ff0000;
+  }
+  ```
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-color
 
 Text color of the options.
 
-**Default Value**: <div style={{backgroundColor: "#000000", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#000000
+**Default Value**: <ColorPreview color="#000000" />
 
-### Examples
+<Tabs>
+  <TabItem value="exOC1" label="Default">
+
+<MultiSelectExample id="exOC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-color: #000000;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exOC2" label="Red">
+
+<div style={{ "--simple-multi-select-option-color": "#ff0000"}}>
+  <MultiSelectExample id="exOC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-color": "#ff0000"}}>
-    <MultiSelectExample id="exOC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-hover-color
 
 Text color of the options when hovered, or focused.
 
-**Default Value**: <div style={{backgroundColor: "#000000", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#000000
+**Default Value**: <ColorPreview color="#000000" />
 
-### Examples
+<Tabs>
+  <TabItem value="exOH1" label="Default">
+
+<MultiSelectExample id="exOH1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-hover-color: #000000;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exOH2" label="Red">
+
+<div style={{ "--simple-multi-select-option-hover-color": "#ff0000"}}>
+  <MultiSelectExample id="exOH2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-hover-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-hover-color": "#ff0000"}}>
-    <MultiSelectExample id="exOH1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-bg-color
 
 Background color of the options.
 
-**Default Value**: <div style={{backgroundColor: "#ffffff", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#ffffff
+**Default Value**: <ColorPreview color="#ffffff" />
 
-### Examples
+<Tabs>
+  <TabItem value="exOB1" label="Default">
+
+<MultiSelectExample id="exOB1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-bg-color: #ffffff;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exOB2" label="Red">
+
+<div style={{ "--simple-multi-select-option-bg-color": "#ff0000"}}>
+  <MultiSelectExample id="exOB2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-bg-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-bg-color": "#ff0000"}}>
-    <MultiSelectExample id="exOBC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-bg-hover-color
 
 Background color of the options when hovered, or focused.
 
-**Default Value**: <div style={{backgroundColor: "#CDDAF5", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#CDDAF5
+**Default Value**: <ColorPreview color="#CDDAF5" />
 
-### Examples
+<Tabs>
+  <TabItem value="exOBHC1" label="Default">
+
+<MultiSelectExample id="exOBHC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-bg-hover-color: #CDDAF5;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exOBHC2" label="Red">
+
+<div style={{ "--simple-multi-select-option-bg-hover-color": "#ff0000"}}>
+  <MultiSelectExample id="exOBHC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-bg-hover-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-bg-hover-color": "#ff0000"}}>
-    <MultiSelectExample id="exOBHC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-disabled-color
 
 Color of the options when disabled.
 
-**Default Value**: <div style={{backgroundColor: "#4b4b4b", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#4b4b4b
+**Default Value**: <ColorPreview color="#4b4b4b" />
 
-### Examples
+<Tabs>
+  <TabItem value="exODC1" label="Default">
+
+<MultiSelectExample id="exODC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-disabled-color: #4b4b4b;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exODC2" label="Red">
+
+<div style={{ "--simple-multi-select-option-disabled-color": "#ff0000"}}>
+  <MultiSelectExample id="exODC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-disabled-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-disabled-color": "#ff0000"}}>
-    <MultiSelectExample id="exODC1" />
-  </div>
+  </TabItem>
+</Tabs>
 
 ## --simple-multi-select-option-disabled-bg-color
 
 Background color of the options when disabled.
 
-**Default Value**: <div style={{backgroundColor: "#d9d9d9", display: "inline-block", width: "12px", height: "12px", border: "1px solid black", marginRight: "5px"}}></div>#d9d9d9
+**Default Value**: <ColorPreview color="#d9d9d9" />
 
-### Examples
+<Tabs>
+  <TabItem value="exODBGC1" label="Default">
+
+<MultiSelectExample id="exODBGC1" />
+
+  ```css
+  :root {
+    --simple-multi-select-option-disabled-bg-color: #d9d9d9;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exODBGC2" label="Red">
+
+<div style={{ "--simple-multi-select-option-disabled-bg-color": "#ff0000"}}>
+  <MultiSelectExample id="exODBGC2" />
+</div>
 
   ```css
   :root {
     --simple-multi-select-option-disabled-bg-color: #ff0000;
   }
   ```
-  <div style={{ "--simple-multi-select-option-disabled-bg-color": "#ff0000"}}>
-    <MultiSelectExample id="exODBGC1" />
-  </div>
+  </TabItem>
+</Tabs>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 
 class MultiSelectExample extends React.Component {
@@ -8,20 +8,18 @@ class MultiSelectExample extends React.Component {
     }
 
     componentDidMount() {
-        const { MultiSelect, InitializeAllMultiSelects, multiSelects } = require("@simple-web-utilities/simple-multi-select");
+        const { MultiSelect, InitializeAllMultiSelects } = require("@simple-web-utilities/simple-multi-select");
         InitializeAllMultiSelects();
     }
 
     render() {
         return (
             <div>
-                <select id={this.state.id} multiple data-none-selected-text="Nothing Selected">
+                <select id={this.state.id} multiple data-none-selected-text="Nothing Selected" defaultValue={["1"]}>
                     <option value="all" data-make-others-match="">
                         All
                     </option>
-                    <option value="1" selected>
-                        Option 1
-                    </option>
+                    <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3" disabled>
                         Option 3

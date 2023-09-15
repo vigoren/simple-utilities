@@ -30,10 +30,8 @@
   <option value="4" selected disabled>Option 4</option>
 </select>
 <script type="module">
-  import {MultiSelect, InitializeAllMultiSelects, multiSelects} from "./scripts/index.ts";
-  multiSelects[2].registerOnChangeCallback((multiSelectId, selectedValues) => {
-    console.log(selectedValues);
-  });
+  import {MultiSelect, InitializeAllMultiSelects} from "./scripts/index.ts";
+  InitializeAllMultiSelects();
 </script>
 </body>
 </html>

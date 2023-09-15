@@ -1,0 +1,11 @@
+.colorPreviewWrapper{
+    display: inline-block;
+}
+
+.colorPreview {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    margin-right: 5px;
+}

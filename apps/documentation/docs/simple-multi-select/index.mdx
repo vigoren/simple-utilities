@@ -1,4 +1,6 @@
 import MultiSelectExample from '@site/src/components/MultiSelectExample';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Simple Multi-Select
 
@@ -16,7 +18,7 @@ Attributes set on the native select are used to drive how the new multiple selec
 
 This is a small demo of Simple Multi-Select in action to give an idea on how it works.
 
-<MultiSelectExample id="demo" />
+<MultiSelectExample id="demoms" />
 
 ## Installation
 
@@ -24,6 +26,8 @@ This is a small demo of Simple Multi-Select in action to give an idea on how it 
 npm install @simple-web-utilities/simple-multi-select
 ```
 ## Getting Started
+
+To get started make sure that you include the CSS and JavaScript on your page or into your project files.
 
 ### HTML
 
@@ -37,55 +41,69 @@ The HTML for the multiple select is very simple. It is just a native select elem
 </select>
 ```
 
-There are several optional attributes that can be set on the native select element to customize the multiple select.
+For details about the available attributes and other options check out the [HTML Options](html).
 
-#### `data-none-selected-text`
+### CSS
 
-This attribute sets the text that is displayed when no options are selected. If this attribute is not set, the default text is `None Selected`.
+You can link to the css file directly or import it into your own css file.
 
-```html
-<select multiple data-none-selected-text="Select Options">
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
-  <option value="3">Option 3</option>
-</select>
-```
+:::note
 
-#### `data-label`
+It is encouraged to import the library into your own css file.
 
-If no label is associated with the native select element, this attribute can be used to set the label for the multiple select. This is the text shown above the selected options.
+:::
+
+
+<Tabs>
+  <TabItem value="file" label="CSS File">
 
 ```html
-<select multiple data-label="My Great Multiple Select">
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
-  <option value="3">Option 3</option>
-</select>
+<link rel="stylesheet" href="node_modules/@simple-web-utilities/simple-multi-select/dist/simple-multi-select.css" />
 ```
 
-## JavaScript
+  </TabItem>
+  <TabItem value="import" label="Import">
+
+```css
+@import '@simple-web-utilities/simple-multi-select/dist/simple-multi-select.css';
+```
+
+  </TabItem>
+</Tabs>
+
+For more options on customizing the CSS check out the available [CSS Variables](css-variables).
+
+
+### JavaScript
 
 Once you have the HTML for your multi-select element, the JavaScript need to be added to the page. This library is available as an ES Module and a UMD module.
 
-### ES Module
+<Tabs>
+  <TabItem value="es" label="ES Module">
 
 ```javascript
-import {MultiSelect, InitializeAllMultiSelects, multiSelects} from "@simple-web-utilities/simple-multi-select";
+import {MultiSelect, InitializeAllMultiSelects} from "@simple-web-utilities/simple-multi-select";
 ```
 
-### UMD
+  </TabItem>
+  <TabItem value="umd" label="UMD">
 
 ```javascript
-const {MultiSelect, InitializeAllMultiSelects, multiSelects} = SimpleMultiSelect;
+const { MultiSelect, InitializeAllMultiSelects } = require("@simple-web-utilities/simple-multi-select");
 ```
 
-### Initialize
+  </TabItem>
+</Tabs>
 
-By default, the library will automatically initialize all multiple select elements on the page. If you want to initialize them manually, you can use the `InitializeAllMultiSelects` function or with the `MultiSelect` class.
+For details about the available functions and classes check out the [detailed documentation](javascript/modules.md).
+
+### Initializing
+
+There are two ways to initialize the multiple select elements.
 
 #### Initialize All
 
-This function looks for every multiple select element on the page and initializes them. If the multiple select has already been initialized, it will be skipped.
+The [`InitializeAllMultiSelects`](javascript/modules.md#initializeallmultiselects) function looks for every multiple select element on the page and initializes them. If the multiple select has already been initialized, it will be skipped.
 
 ```javascript
 InitializeAllMultiSelects();
@@ -93,26 +111,8 @@ InitializeAllMultiSelects();
 
 #### Initialize with Class
 
-This class can be used to initialize a single multiple select element. The constructor takes the native select element as a parameter.
-
-It can optionally also accept a label element. If the label element is not passed in, it will create one.
+The [`MultiSelect`](javascript/classes/MultiSelect.md) class can be used to initialize a single multiple select element. The constructor takes the native select element as a parameter.
 
 ```javascript
-const multiSelect1 = new MultiSelect(document.getElementById("demo"));
-
-const multiSelect2 = new MultiSelect(document.getElementById("demo"), document.getElementById("label"));
+const multiSelect = new MultiSelect(document.getElementById("demo"));
 ```
-
-#### Initialized Multiple Selects
-
-When the `InitializeAllMultiSelects` function is run automatically it generates an array of all the initialized multiple select elements. This array is available as the `multiSelects` variable.
-
-```javascript
-multiSelects.forEach((multiSelect) => {
-  // Do something with the multiple select
-});
-```
-
-### Using the Class
-
-After the multiple select has been initialized, there are several methods available to interact with it.

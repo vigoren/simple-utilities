@@ -49,6 +49,27 @@ const config = {
         ]
     ],
 
+    plugins: [
+        [
+            "docusaurus-plugin-typedoc",
+
+            // Plugin / TypeDoc options
+            {
+                entryPoints: ["../../packages/simple-multi-select/src/scripts/index.ts"],
+                out: "simple-multi-select/javascript",
+                tsconfig: "../../packages/simple-multi-select/tsconfig.json",
+                media: "./static/img",
+                frontmatter: {
+                    pagination_next: null,
+                    pagination_prev: null
+                },
+                sidebar: {
+                    //fullNames: true
+                }
+            }
+        ]
+    ],
+
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -90,23 +111,10 @@ const config = {
                             {
                                 label: "Simple Animation",
                                 to: "/docs/simple-animation"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Community",
-                        items: [
-                            {
-                                label: "Stack Overflow",
-                                href: "https://stackoverflow.com/questions/tagged/docusaurus"
                             },
                             {
-                                label: "Discord",
-                                href: "https://discordapp.com/invite/docusaurus"
-                            },
-                            {
-                                label: "Twitter",
-                                href: "https://twitter.com/docusaurus"
+                                label: "Simple Multi-Select",
+                                to: "/docs/simple-multi-select"
                             }
                         ]
                     },
