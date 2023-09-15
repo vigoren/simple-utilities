@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+-   731b829: Added documentation for the new Simple Multi-Select package
+
+### Patch Changes
+
+-   Updated dependencies [731b829]
+-   Updated dependencies [42298cf]
+    -   @simple-web-utilities/simple-multi-select@1.0.0
+    -   @simple-web-utilities/simple-animation@1.2.4
+
 ## 1.1.3
 
 ### Patch Changes

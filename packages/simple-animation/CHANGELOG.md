@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.4
+
+### Patch Changes
+
+-   42298cf: Updated License details. Switched to a more permissive MPL-2.0 license
+
 ## 1.2.3
 
 ### Patch Changes
