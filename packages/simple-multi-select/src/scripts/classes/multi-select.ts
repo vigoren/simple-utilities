@@ -16,12 +16,31 @@ export class MultiSelect {
 
     #options: MultiSelectOption[] = [];
 
-    constructor(selectElement: HTMLSelectElement, labelElement: HTMLLabelElement) {
+    #onChangeCallback: (multiSelectId: string, selectedValues: string[]) => void = () => {};
+
+    constructor(
+        selectElement: HTMLSelectElement,
+        labelElement: HTMLLabelElement | null,
+        onChangeCallback: ((multiSelectId: string, selectedValues: string[]) => void) | null = null
+    ) {
         this.#element = selectElement;
         this.#elementId = selectElement.getAttribute("id") || "";
-        this.#label = labelElement;
         this.#wrapper = this.#createWrapper();
-        this.#label.id = `${this.#elementId}_label`;
+
+        if (!labelElement) {
+            //If the parent element is not a label, create one
+            this.#label = document.createElement("label");
+            this.#label.innerText = this.#element.getAttribute("data-label") || "";
+            this.#label.id = `${this.#elementId}_label`;
+            this.#label.htmlFor = this.#elementId;
+        } else {
+            this.#label = labelElement;
+        }
+
+        if (onChangeCallback) {
+            this.#onChangeCallback = onChangeCallback;
+        }
+
         this.#process();
     }
 
@@ -203,6 +222,16 @@ export class MultiSelect {
             if (this.#buttonTextElement) {
                 this.#buttonTextElement.innerText = this.#buttonText;
             }
+            this.#onChangeCallback(
+                this.#elementId,
+                this.#options
+                    .filter((o) => {
+                        return o.selected && !o.makeOthersMatch;
+                    })
+                    .map((o) => {
+                        return o.value;
+                    })
+            );
         }
     };
 
@@ -231,6 +260,10 @@ export class MultiSelect {
             option.classList.remove("sms-selected");
         }
     }
+
+    registerOnChangeCallback(onChangeCallback: (multiSelectId: string, selectedValues: string[]) => void) {
+        this.#onChangeCallback = onChangeCallback;
+    }
 }
 
 export function InitializeAllMultiSelects() {
@@ -253,12 +286,6 @@ export function InitializeAllMultiSelects() {
                 if (parentElement instanceof HTMLLabelElement) {
                     labelElement = parentElement;
                 }
-            }
-
-            //If the parent element is not a label, create one
-            if (!labelElement) {
-                labelElement = document.createElement("label");
-                labelElement.innerText = multiSelect.getAttribute("data-label") || "";
             }
 
             const multiSelectElement = new MultiSelect(multiSelect, labelElement);
