@@ -73,6 +73,14 @@ It is encouraged to import the library into your own css file.
 
 For more options on customizing the CSS check out the available [CSS Variables](css-variables).
 
+#### Dark Mode
+
+This library supports dark mode by setting the `data-theme` attribute on the `html` element. The default theme is `light`. To use the dark theme set the `data-theme` attribute to `dark`.
+
+```html
+<html data-theme="dark">
+```
+
 
 ### JavaScript
 
@@ -95,24 +103,5 @@ const { MultiSelect, InitializeAllMultiSelects } = require("@simple-web-utilitie
   </TabItem>
 </Tabs>
 
-For details about the available functions and classes check out the [detailed documentation](javascript/modules.md).
+Details about how to initialize the multi-selects and the available options can be found in the [JavaScript Options](javascript/index.mdx).
 
-### Initializing
-
-There are two ways to initialize the multiple select elements.
-
-#### Initialize All
-
-The [`InitializeAllMultiSelects`](javascript/modules.md#initializeallmultiselects) function looks for every multiple select element on the page and initializes them. If the multiple select has already been initialized, it will be skipped.
-
-```javascript
-InitializeAllMultiSelects();
-```
-
-#### Initialize with Class
-
-The [`MultiSelect`](javascript/classes/MultiSelect.md) class can be used to initialize a single multiple select element. The constructor takes the native select element as a parameter.
-
-```javascript
-const multiSelect = new MultiSelect(document.getElementById("demo"));
-```

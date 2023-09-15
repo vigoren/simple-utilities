@@ -56,7 +56,7 @@ const config = {
             // Plugin / TypeDoc options
             {
                 entryPoints: ["../../packages/simple-multi-select/src/scripts/index.ts"],
-                out: "simple-multi-select/javascript",
+                out: "simple-multi-select/javascript/api",
                 tsconfig: "../../packages/simple-multi-select/tsconfig.json",
                 media: "./static/img",
                 frontmatter: {
@@ -64,7 +64,7 @@ const config = {
                     pagination_prev: null
                 },
                 sidebar: {
-                    //fullNames: true
+                    fullNames: true
                 }
             }
         ]

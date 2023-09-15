@@ -49,9 +49,11 @@ const sidebars = {
         {
             type: "category",
             label: "JavaScript",
-            collapsible: true,
-            collapsed: false,
-            items: ["simple-multi-select/javascript/modules", "simple-multi-select/javascript/classes/MultiSelect"]
+            link: {
+                type: "doc",
+                id: "simple-multi-select/javascript/index"
+            },
+            items: ["simple-multi-select/javascript/api/modules", "simple-multi-select/javascript/api/classes/MultiSelect"]
         }
     ]
 
