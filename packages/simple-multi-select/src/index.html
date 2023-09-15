@@ -29,6 +29,11 @@
   <option value="3">Option 3</option>
   <option value="4" selected disabled>Option 4</option>
 </select>
-<script type="module" src="./scripts/index.ts"></script>
+<script type="module">
+  import {MultiSelect, InitializeAllMultiSelects, multiSelects} from "./scripts/index.ts";
+  multiSelects[2].registerOnChangeCallback((multiSelectId, selectedValues) => {
+    console.log(selectedValues);
+  });
+</script>
 </body>
 </html>

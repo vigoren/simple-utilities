@@ -1,0 +1,118 @@
+import MultiSelectExample from '@site/src/components/MultiSelectExample';
+
+# Simple Multi-Select
+
+A library to create simple multiple select elements. These multiple selects look similar to the native select element, but allow users to choose multiple options.
+
+This library uses both JavaScript and CSS. There are several [CSS Variables](css-variables) available to customize the look of the multiple select.
+
+## How It Works
+
+This library works by looking for native multiple select elements on a page and changing them into an easier to use multiple select. The native select element is hidden and a new element is created to replace it.
+
+Attributes set on the native select are used to drive how the new multiple select works.
+
+### Demo
+
+This is a small demo of Simple Multi-Select in action to give an idea on how it works.
+
+<MultiSelectExample id="demo" />
+
+## Installation
+
+```bash
+npm install @simple-web-utilities/simple-multi-select
+```
+## Getting Started
+
+### HTML
+
+The HTML for the multiple select is very simple. It is just a native select element with the `multiple` attribute set.
+
+```html
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+There are several optional attributes that can be set on the native select element to customize the multiple select.
+
+#### `data-none-selected-text`
+
+This attribute sets the text that is displayed when no options are selected. If this attribute is not set, the default text is `None Selected`.
+
+```html
+<select multiple data-none-selected-text="Select Options">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+#### `data-label`
+
+If no label is associated with the native select element, this attribute can be used to set the label for the multiple select. This is the text shown above the selected options.
+
+```html
+<select multiple data-label="My Great Multiple Select">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+## JavaScript
+
+Once you have the HTML for your multi-select element, the JavaScript need to be added to the page. This library is available as an ES Module and a UMD module.
+
+### ES Module
+
+```javascript
+import {MultiSelect, InitializeAllMultiSelects, multiSelects} from "@simple-web-utilities/simple-multi-select";
+```
+
+### UMD
+
+```javascript
+const {MultiSelect, InitializeAllMultiSelects, multiSelects} = SimpleMultiSelect;
+```
+
+### Initialize
+
+By default, the library will automatically initialize all multiple select elements on the page. If you want to initialize them manually, you can use the `InitializeAllMultiSelects` function or with the `MultiSelect` class.
+
+#### Initialize All
+
+This function looks for every multiple select element on the page and initializes them. If the multiple select has already been initialized, it will be skipped.
+
+```javascript
+InitializeAllMultiSelects();
+```
+
+#### Initialize with Class
+
+This class can be used to initialize a single multiple select element. The constructor takes the native select element as a parameter.
+
+It can optionally also accept a label element. If the label element is not passed in, it will create one.
+
+```javascript
+const multiSelect1 = new MultiSelect(document.getElementById("demo"));
+
+const multiSelect2 = new MultiSelect(document.getElementById("demo"), document.getElementById("label"));
+```
+
+#### Initialized Multiple Selects
+
+When the `InitializeAllMultiSelects` function is run automatically it generates an array of all the initialized multiple select elements. This array is available as the `multiSelects` variable.
+
+```javascript
+multiSelects.forEach((multiSelect) => {
+  // Do something with the multiple select
+});
+```
+
+### Using the Class
+
+After the multiple select has been initialized, there are several methods available to interact with it.

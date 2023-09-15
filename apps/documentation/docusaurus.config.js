@@ -68,6 +68,12 @@ const config = {
                         label: "Simple Animation"
                     },
                     {
+                        type: "docSidebar",
+                        sidebarId: "simpleMultiSelectSidebar",
+                        position: "left",
+                        label: "Simple Multi-Select"
+                    },
+                    {
                         href: "https://github.com/vigoren/simple-web-utilities",
                         position: "right",
                         className: "header-github-link",

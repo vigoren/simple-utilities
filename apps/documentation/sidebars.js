@@ -41,7 +41,8 @@ const sidebars = {
             items: ["simple-animation/javascript-helpers/collapse"]
         },
         "simple-animation/utility-classes"
-    ]
+    ],
+    simpleMultiSelectSidebar: ["simple-multi-select/index", "simple-multi-select/css-variables"]
 
     // But you can create a sidebar manually
     /*
