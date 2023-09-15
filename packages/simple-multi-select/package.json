@@ -26,7 +26,9 @@
         "access": "public"
     },
     "keywords": [
-        "scroll",
+        "multi-select",
+        "multiple select",
+        "select",
         "library",
         "javascript",
         "typescript"

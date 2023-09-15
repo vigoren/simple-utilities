@@ -1,4 +1,4 @@
-import { MultiSelectOption, onChangeCallback } from "../types";
+import type { MultiSelectOption, onChangeCallback } from "../types.d.ts";
 
 /**
  * A class to convert a native select element into a multi-select that resembles a native select element.
