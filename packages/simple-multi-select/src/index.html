@@ -3,19 +3,32 @@
   <meta charset="UTF-8">
   <title>Simple Multi-Select - Tests</title>
   <style>
+      :root{
+          --bg-color: #ffffff;
+          --text-color: #000000;
+      }
     body{
-        background-color: #ffffff;
-        color: #000000;
+        background-color: var(--bg-color);
+        color: var(--text-color);
     }
-    @media (prefers-color-scheme: dark) {
-        body{
-            background-color: #000000;
-            color: #ffffff;
-        }
+    [data-theme="dark"] {
+      --bg-color: #000000;
+      --text-color: #ffffff;
     }
   </style>
+  <script>
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
+  </script>
 </head>
 <body>
+<button type="button" id="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
 <select id="test1" multiple data-none-selected-text="None Selected" data-help-text="This is some help text">
   <option value="1" selected>Option 1</option>
   <option value="2">Option 2</option>
