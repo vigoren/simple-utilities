@@ -142,9 +142,11 @@ export class MultiSelect {
     #createSelectButton(): HTMLButtonElement {
         const button = document.createElement("button");
         button.classList.add("sms-button");
+        button.setAttribute("type", "button");
         this.#buttonTextElement = document.createElement("span");
         this.#buttonTextElement.classList.add("sms-selected-items");
         this.#buttonTextElement.innerText = this.#buttonText;
+
         button.appendChild(this.#buttonTextElement);
         const buttonIcon = document.createElement("span");
         buttonIcon.classList.add("sms-icon");
