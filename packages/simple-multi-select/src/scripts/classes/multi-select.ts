@@ -50,6 +50,11 @@ export class MultiSelect {
      * @private
      */
     #onChangeCallback: onChangeCallback | null = null;
+    /**
+     * The help text to display below the multi-select.
+     * @private
+     */
+    #helpText: string = "";
 
     /**
      * Creates a new MultiSelect
@@ -118,6 +123,14 @@ export class MultiSelect {
             this.#wrapper.appendChild(options);
             if (this.#label) {
                 this.#wrapper.appendChild(this.#label);
+            }
+            //Add help text
+            this.#helpText = this.#element.getAttribute("data-help-text") || "";
+            if (this.#helpText) {
+                const helpTextElement = document.createElement("div");
+                helpTextElement.classList.add("sms-help-text");
+                helpTextElement.innerText = this.#helpText;
+                this.#wrapper.appendChild(helpTextElement);
             }
             document.body.addEventListener("click", this.#bodyClick);
         }
