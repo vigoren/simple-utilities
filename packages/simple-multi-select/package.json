@@ -1,6 +1,6 @@
 {
     "name": "@simple-web-utilities/simple-multi-select",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A basic multiple select input.",
     "type": "module",
     "main": "dist/simple-multi-select.umd.js",
