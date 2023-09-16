@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+-   4062ca4: Updated documentation for Simple Multi-Select for the new help text option.
+-   Updated dependencies [4062ca4]
+-   Updated dependencies [4062ca4]
+    -   @simple-web-utilities/simple-multi-select@1.1.0
+
 ## 1.2.0
 
 ### Minor Changes

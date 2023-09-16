@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+-   4062ca4: Added a new option to selects to specify help text. Help text will appear below the multiple select box. The help text can be colored with the css variable `--simple-multi-select-help-text-color`.
+
+### Patch Changes
+
+-   4062ca4: Fixed a bug where the main button was concidered a submit button if used in forms.
+
 ## 1.0.0
 
 ### Major Changes
