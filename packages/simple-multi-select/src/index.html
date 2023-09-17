@@ -54,6 +54,14 @@
   <option value="3">Option 3</option>
   <option value="4" selected disabled>Option 4</option>
 </select>
+<select id="test4" data-none-selected-text="None Selected">
+  <option value="all" data-make-others-match>All</option>
+  <option value="1" selected>Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3" disabled>Option 3</option>
+  <option value="4">Option 4</option>
+</select>
+<label for="test4">This is Test 4</label>
 <script type="module">
   import {MultiSelect, InitializeAllMultiSelects} from "./scripts/index.ts";
   InitializeAllMultiSelects();
