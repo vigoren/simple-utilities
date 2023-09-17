@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.3.0
+
+### Minor Changes
+
+-   fc7eb4f: Added a get function to return the selects ID.
+-   399ac22: Added support for single selects. All selects on a page will then have a similar style reguardless of if they are single or multiple.
+
+### Patch Changes
+
+-   84a11bc: Added a parameter to the `InitializeAllMultiSelects` function called root. This takes a HTMLElement or Document type and will use that as the basis to search for all selects. This defaults to the document. This is useful if the scope of where to search for selects needs to be limited on a page.
+-   c83b6a7: Moved the icons to a css variable. This will prevent duplicating the base64 ecoded versions in the compiled css.
+
 ## 1.2.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.2.3
+
+### Patch Changes
+
+-   466720f: Updated documentation for the new ID getter on the MultiSelect class and updated documentation for the InitializeAllMultiSelects to account for the new root parameter.
+-   Updated dependencies [84a11bc]
+-   Updated dependencies [fc7eb4f]
+-   Updated dependencies [c83b6a7]
+-   Updated dependencies [399ac22]
+    -   @simple-web-utilities/simple-multi-select@1.3.0
+
 ## 1.2.2
 
 ### Patch Changes
