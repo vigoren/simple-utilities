@@ -5,8 +5,8 @@
   list-style: none;
   visibility: hidden;
   top: calc((var(--simple-multi-select-font-size) * 3.125) - (var(--simple-multi-select-border-radius) / 2));
-  left: 0;
-  right: 0;
+  left: -1px;
+  right: -1px;
   position: absolute;
   z-index: 100;
   border: 1px solid var(--simple-multi-select-border-color);
@@ -31,6 +31,9 @@
     &:hover, &:focus{
       background-color: var(--simple-multi-select-option-bg-hover-color);
       color: var(--simple-multi-select-option-hover-color);
+      .checkbox{
+        background-color: var(--simple-multi-select-option-hover-color);
+      }
     }
 
     &.disabled{
