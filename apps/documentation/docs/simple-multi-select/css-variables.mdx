@@ -492,3 +492,35 @@ Background color of the options when disabled.
   ```
   </TabItem>
 </Tabs>
+
+## --simple-multi-select-helper-text-color
+
+Color of the help text.
+
+**Default Value**: <ColorPreview color="#6c757d" />
+
+
+<Tabs>
+  <TabItem value="exHTC1" label="Default">
+
+<MultiSelectExample id="exHTC1" helpText="Sample help text!" />
+
+  ```css
+  :root {
+    --simple-multi-select-help-text-color: #6c757d;
+  }
+  ```
+  </TabItem>
+  <TabItem value="exHTC2" label="Red">
+
+<div style={{ "--simple-multi-select-help-text-color": "#ff0000"}}>
+  <MultiSelectExample id="exHTC2" helpText="Sample help text!" />
+</div>
+
+  ```css
+  :root {
+    --simple-multi-select-help-text-color: #ff0000;
+  }
+  ```
+  </TabItem>
+</Tabs>
