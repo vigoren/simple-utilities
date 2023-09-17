@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+-   5abfe66: Changed the icons to use the Font Awesome Free icons over the Bootstrap Icons.
+-   77f5f56: Fixed an issue with the checkbox for disabled option not being the correct color.
+
 ## 1.2.0
 
 ### Minor Changes
