@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
--   305f394: a
+-   305f394: Added a new HTML option called `data-ignore-label`. This option will have the multi-select not more any associated labels or create a new one.
 
 ### Patch Changes
 
