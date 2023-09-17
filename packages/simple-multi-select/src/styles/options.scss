@@ -50,6 +50,14 @@
       cursor: not-allowed;
       color: var(--simple-multi-select-option-disabled-color);
       background-color: var(--simple-multi-select-option-disabled-bg-color);
+      &:hover, &:focus{
+        .checkbox{
+          background-color: var(--simple-multi-select-option-disabled-color);
+        }
+      }
+      .checkbox{
+        background-color: var(--simple-multi-select-option-disabled-color);
+      }
     }
 
     .checkbox{
