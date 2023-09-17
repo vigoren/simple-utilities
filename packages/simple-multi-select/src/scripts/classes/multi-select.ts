@@ -55,6 +55,11 @@ export class MultiSelect {
      * @private
      */
     #helpText: string = "";
+    /**
+     * If changing the label should be ignored.
+     * @private
+     */
+    #ignoreLabel: boolean = false;
 
     /**
      * Creates a new MultiSelect
@@ -64,6 +69,7 @@ export class MultiSelect {
     constructor(selectElement: HTMLSelectElement, onChangeCallback: onChangeCallback | null = null) {
         this.#element = selectElement;
         this.#elementId = selectElement.getAttribute("id") || "";
+        this.#ignoreLabel = this.#element.hasAttribute("data-ignore-label");
         this.#wrapper = this.#createWrapper();
         this.#findLabel();
         if (onChangeCallback) {
@@ -80,22 +86,24 @@ export class MultiSelect {
      * @private
      */
     #findLabel() {
-        //Find associated label element
-        this.#label = document.querySelector(`label[for="${this.#elementId}"]`);
+        if (!this.#ignoreLabel) {
+            //Find associated label element
+            this.#label = document.querySelector(`label[for="${this.#elementId}"]`);
 
-        //If no label element found, look to see if the parent element is a label
-        if (!this.#label) {
-            const parentElement = this.#element?.parentElement;
-            if (parentElement instanceof HTMLLabelElement) {
-                this.#label = parentElement;
+            //If no label element found, look to see if the parent element is a label
+            if (!this.#label) {
+                const parentElement = this.#element?.parentElement;
+                if (parentElement instanceof HTMLLabelElement) {
+                    this.#label = parentElement;
+                }
             }
-        }
-        //If the parent element is not a label, create one
-        if (!this.#label) {
-            this.#label = document.createElement("label");
-            this.#label.innerText = this.#element?.getAttribute("data-label") || "";
-            this.#label.id = `${this.#elementId}_label`;
-            this.#label.htmlFor = this.#elementId;
+            //If the parent element is not a label, create one
+            if (!this.#label) {
+                this.#label = document.createElement("label");
+                this.#label.innerText = this.#element?.getAttribute("data-label") || "";
+                this.#label.id = `${this.#elementId}_label`;
+                this.#label.htmlFor = this.#elementId;
+            }
         }
     }
 
@@ -144,6 +152,9 @@ export class MultiSelect {
     #createWrapper(): HTMLDivElement {
         const wrapper = document.createElement("div");
         wrapper.classList.add("sms-wrapper");
+        if (this.#ignoreLabel) {
+            wrapper.classList.add("sms-no-label");
+        }
         return wrapper;
     }
 

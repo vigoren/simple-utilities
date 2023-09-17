@@ -40,3 +40,10 @@
     mask-size: cover;
   }
 }
+
+&.no-label{
+  .button{
+    padding-top: calc(var(--simple-multi-select-font-size)*.6);
+    padding-bottom: calc(var(--simple-multi-select-font-size)*.6);
+  }
+}

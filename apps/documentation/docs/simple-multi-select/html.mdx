@@ -38,6 +38,24 @@ If no label is associated with the native select element, this attribute can be 
 </select>
 ```
 
+### `data-ignore-label`
+
+This attribute can be set on the native select element to have the multi-select not touch any associated labels or create a new one.
+
+:::caution
+
+Setting this option will ignore any `data-label` attribute set on the native select element.
+
+:::
+
+```html
+<select multiple data-ignore-label>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
 ### `data-help-text`
 
 This attribute sets the help text that is displayed below the multiple select. If this attribute is not set, no help text is displayed.

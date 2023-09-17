@@ -7,3 +7,4 @@ The goal of these utilities is to provide easy to use functionality to be used i
 ## Utilities
 
 - [Simple Animations](./packages/simple-animation/README.md): A simple animation library using mainly CSS with minimal JavaScript.
+- [Simple Multi-Select](./packages/simple-multi-select/README.md): A simple multi-select component.
