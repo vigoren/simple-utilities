@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+-   305f394: a
+
+### Patch Changes
+
+-   a1b2231: Fixed an issue where the checkbox for options would use the wrong text color.
+-   4199c39: Fixes for the options dropdown alignment, positioning and border radius.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.2.2
+
+### Patch Changes
+
+-   305f394: Updated documentation for the new css variable `--simple-multi-select-help-text-color` and the new HTML option `data-ignore-label`
+-   Updated dependencies [305f394]
+-   Updated dependencies [a1b2231]
+-   Updated dependencies [4199c39]
+    -   @simple-web-utilities/simple-multi-select@1.2.0
+
 ## 1.2.1
 
 ### Patch Changes
