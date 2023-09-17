@@ -62,7 +62,7 @@
 
     .checkbox{
       display: inline-block;
-      width: var(--simple-multi-select-font-size);
+      width: calc(var(--simple-multi-select-font-size) * 0.875);
       height: var(--simple-multi-select-font-size);
       margin-right: 5px;
       background-color: var(--simple-multi-select-option-color);

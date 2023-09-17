@@ -32,7 +32,7 @@ export default defineConfig({
     License, v. 2.0. If a copy of the MPL was not distributed with this
     file, You can obtain one at http://mozilla.org/MPL/2.0/.
     
-    Icons by Bootstrap Icons (https://icons.getbootstrap.com/).
+    Icons by Font Awesome Free 6.4.2 (https://fontawesome.com/license).
 `),
         dts({ rollupTypes: true })
     ]
