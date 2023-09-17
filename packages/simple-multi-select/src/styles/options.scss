@@ -66,13 +66,13 @@
       height: var(--simple-multi-select-font-size);
       margin-right: 5px;
       background-color: var(--simple-multi-select-option-color);
-      mask-image: url("../assets/square.svg");
+      mask-image: var(--simple-multi-select-icon-unchecked);
       mask-size: cover;
     }
 
     &.selected{
       .checkbox{
-        mask-image: url("../assets/check-square.svg");
+        mask-image: var(--simple-multi-select-icon-checked);
       }
     }
   }
