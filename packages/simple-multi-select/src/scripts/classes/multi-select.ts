@@ -466,11 +466,11 @@ export class MultiSelect {
 /**
  * This function initializes all multi-selects on the page.
  * Searches for all native selects with the `multiple` attribute, insures they have not already been initialized, and initializes them.
- * @constructor
+ * @param {HTMLElement | Document} root The root element to search for multi-selects. Defaults to the document.
  * @returns {MultiSelect[]} Returns an array of initialized multi-selects.
  */
-export function InitializeAllMultiSelects(): MultiSelect[] {
-    const multiSelects = document.querySelectorAll("select");
+export function InitializeAllMultiSelects(root: HTMLElement | Document = document): MultiSelect[] {
+    const multiSelects = root.querySelectorAll("select");
     const initializedMultiSelects: MultiSelect[] = [];
     for (let i = 0; i < multiSelects.length; i++) {
         const multiSelect = multiSelects[i];
