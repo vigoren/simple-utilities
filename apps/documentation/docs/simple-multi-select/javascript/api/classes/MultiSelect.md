@@ -27,6 +27,20 @@ Creates a new MultiSelect
 
 ## Accessors
 
+### id
+
+• `get` **id**(): `string`
+
+Gets the id of the multi-select.
+
+#### Returns
+
+`string`
+
+Returns the id of the multi-select
+
+___
+
 ### selectedValues
 
 • `get` **selectedValues**(): `string`[]
