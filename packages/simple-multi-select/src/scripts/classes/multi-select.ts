@@ -395,6 +395,14 @@ export class MultiSelect {
     }
 
     /**
+     * Gets the id of the multi-select.
+     * @returns {string} Returns the id of the multi-select
+     */
+    get id(): string {
+        return this.#elementId;
+    }
+
+    /**
      * Gets the currently selected values.
      * @returns {string[]} Returns an array of selected values
      */
