@@ -39,10 +39,16 @@ The expected function to call when an option is changed
 
 ### InitializeAllMultiSelects
 
-▸ **InitializeAllMultiSelects**(): [`MultiSelect`](classes/MultiSelect.md)[]
+▸ **InitializeAllMultiSelects**(`root?`): [`MultiSelect`](classes/MultiSelect.md)[]
 
 This function initializes all multi-selects on the page.
 Searches for all native selects with the `multiple` attribute, insures they have not already been initialized, and initializes them.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `root` | `HTMLElement` \| `Document` | `document` | The root element to search for multi-selects. Defaults to the document. |
 
 #### Returns
 

@@ -5,6 +5,11 @@ import type { MultiSelectOption, onChangeCallback } from "../types.d.ts";
  */
 export class MultiSelect {
     /**
+     * If the select allows multiple selections.
+     * @private
+     */
+    #isMultiple: boolean = false;
+    /**
      * If the main button was clicked to show the options.
      * Used to tell the registered body click event to not hide the just opened options.
      * @private
@@ -69,6 +74,7 @@ export class MultiSelect {
     constructor(selectElement: HTMLSelectElement, onChangeCallback: onChangeCallback | null = null) {
         this.#element = selectElement;
         this.#elementId = selectElement.getAttribute("id") || "";
+        this.#isMultiple = this.#element.hasAttribute("multiple");
         this.#ignoreLabel = this.#element.hasAttribute("data-ignore-label");
         this.#wrapper = this.#createWrapper();
         this.#findLabel();
@@ -152,6 +158,9 @@ export class MultiSelect {
     #createWrapper(): HTMLDivElement {
         const wrapper = document.createElement("div");
         wrapper.classList.add("sms-wrapper");
+        if (this.#isMultiple) {
+            wrapper.classList.add("sms-multiple");
+        }
         if (this.#ignoreLabel) {
             wrapper.classList.add("sms-no-label");
         }
@@ -190,7 +199,7 @@ export class MultiSelect {
     get #buttonText(): string {
         const selectedOptions = this.#options
             .filter((o) => {
-                return o.selected && !o.makeOthersMatch;
+                return this.#isMultiple ? o.selected && !o.makeOthersMatch : o.selected;
             })
             .map((o) => {
                 return o.text;
@@ -216,8 +225,17 @@ export class MultiSelect {
         options.setAttribute("aria-labelledby", `${this.#elementId}_label`);
         if (this.#element) {
             const origOptions = this.#element.querySelectorAll("option");
+            let selectedCount = 0;
             for (let i = 0; i < origOptions.length; i++) {
                 const option = origOptions[i];
+                if (option.selected) {
+                    selectedCount++;
+
+                    //If this is a single select any subsequent selected items will be set to unselected.
+                    if (!this.#isMultiple && selectedCount > 1) {
+                        option.selected = false;
+                    }
+                }
                 const optionElement = this.#createOption(option);
                 if (optionElement) {
                     options.appendChild(optionElement);
@@ -245,7 +263,12 @@ export class MultiSelect {
         optionElement.classList.add("sms-option");
         optionElement.setAttribute("role", "option");
         optionElement.setAttribute("data-value", option.value);
-        optionElement.innerHTML = `<span class="sms-checkbox"></span> ${option.text}`;
+        if (this.#isMultiple) {
+            optionElement.innerHTML = `<span class="sms-checkbox"></span> ${option.text}`;
+        } else {
+            optionElement.innerHTML = option.text;
+        }
+
         //Check if option is disabled
         if (option.disabled) {
             optionElement.classList.add("sms-disabled");
@@ -302,43 +325,58 @@ export class MultiSelect {
         event.stopPropagation();
         const target = (<HTMLElement>event.target)?.closest("li");
         if (target && !(<HTMLElement>target).classList.contains("sms-disabled")) {
-            this.#updateOption(target, !(<HTMLElement>target).classList.contains("sms-selected"));
             const value = (<HTMLElement>target).getAttribute("data-value");
             const selected = (<HTMLElement>target).classList.contains("sms-selected");
             const optionIndex = this.#options.findIndex((o: MultiSelectOption) => {
                 return o.value === value;
             });
-            if (optionIndex > -1) {
-                this.#options[optionIndex].selected = selected;
-                if (this.#options[optionIndex].makeOthersMatch) {
-                    this.#options.forEach((o, index) => {
-                        if (index !== optionIndex && !o.disabled) {
-                            o.selected = selected;
-                            const optionElement = <HTMLElement>this.#wrapper.querySelector(`li[data-value="${o.value}"]`);
-                            if (optionElement) {
-                                this.#updateOption(optionElement, selected);
+            if (this.#isMultiple) {
+                this.#updateOption(target, !(<HTMLElement>target).classList.contains("sms-selected"));
+                if (optionIndex > -1) {
+                    this.#options[optionIndex].selected = selected;
+                    if (this.#options[optionIndex].makeOthersMatch) {
+                        this.#options.forEach((o, index) => {
+                            if (index !== optionIndex && !o.disabled) {
+                                o.selected = selected;
+                                const optionElement = <HTMLElement>this.#wrapper.querySelector(`li[data-value="${o.value}"]`);
+                                if (optionElement) {
+                                    this.#updateOption(optionElement, selected);
+                                }
                             }
-                        }
-                    });
-                } else {
-                    const optionsUnselected = this.#options.filter((o) => {
-                        return !o.makeOthersMatch && !o.selected && !o.disabled;
-                    });
-                    this.#options.forEach((o, index) => {
-                        if (index !== optionIndex && o.makeOthersMatch) {
-                            if (selected && optionsUnselected.length === 0) {
-                                o.selected = true;
-                            } else if (!selected) {
-                                o.selected = false;
+                        });
+                    } else {
+                        const optionsUnselected = this.#options.filter((o) => {
+                            return !o.makeOthersMatch && !o.selected && !o.disabled;
+                        });
+                        this.#options.forEach((o, index) => {
+                            if (index !== optionIndex && o.makeOthersMatch) {
+                                if (selected && optionsUnselected.length === 0) {
+                                    o.selected = true;
+                                } else if (!selected) {
+                                    o.selected = false;
+                                }
+                                const optionElement = <HTMLElement>this.#wrapper.querySelector(`li[data-value="${o.value}"]`);
+                                if (optionElement) {
+                                    this.#updateOption(optionElement, selected && optionsUnselected.length === 0);
+                                }
                             }
-                            const optionElement = <HTMLElement>this.#wrapper.querySelector(`li[data-value="${o.value}"]`);
-                            if (optionElement) {
-                                this.#updateOption(optionElement, selected && optionsUnselected.length === 0);
-                            }
-                        }
-                    });
+                        });
+                    }
                 }
+            } else {
+                //this.#options[optionIndex].selected = true;
+                this.#options.forEach((o, index) => {
+                    if (!o.disabled) {
+                        o.selected = index === optionIndex;
+                        const optionElement = <HTMLElement>this.#wrapper.querySelector(`li[data-value="${o.value}"]`);
+                        if (optionElement) {
+                            this.#updateOption(optionElement, o.selected);
+                        }
+                    }
+                });
+                this.#bodyClick();
             }
+
             this.#updateOriginalSelect();
             if (this.#buttonTextElement) {
                 this.#buttonTextElement.innerText = this.#buttonText;
@@ -348,7 +386,7 @@ export class MultiSelect {
                     this.#elementId,
                     this.#options
                         .filter((o) => {
-                            return o.selected && !o.makeOthersMatch;
+                            return this.#isMultiple ? o.selected && !o.makeOthersMatch : o.selected;
                         })
                         .map((o) => {
                             return o.value;
@@ -395,13 +433,21 @@ export class MultiSelect {
     }
 
     /**
+     * Gets the id of the multi-select.
+     * @returns {string} Returns the id of the multi-select
+     */
+    get id(): string {
+        return this.#elementId;
+    }
+
+    /**
      * Gets the currently selected values.
      * @returns {string[]} Returns an array of selected values
      */
     get selectedValues(): string[] {
         return this.#options
             .filter((o) => {
-                return o.selected && !o.makeOthersMatch;
+                return this.#isMultiple ? o.selected && !o.makeOthersMatch : o.selected;
             })
             .map((o) => {
                 return o.value;
@@ -420,11 +466,11 @@ export class MultiSelect {
 /**
  * This function initializes all multi-selects on the page.
  * Searches for all native selects with the `multiple` attribute, insures they have not already been initialized, and initializes them.
- * @constructor
+ * @param {HTMLElement | Document} root The root element to search for multi-selects. Defaults to the document.
  * @returns {MultiSelect[]} Returns an array of initialized multi-selects.
  */
-export function InitializeAllMultiSelects(): MultiSelect[] {
-    const multiSelects = document.querySelectorAll("select[multiple]");
+export function InitializeAllMultiSelects(root: HTMLElement | Document = document): MultiSelect[] {
+    const multiSelects = root.querySelectorAll("select");
     const initializedMultiSelects: MultiSelect[] = [];
     for (let i = 0; i < multiSelects.length; i++) {
         const multiSelect = multiSelects[i];
