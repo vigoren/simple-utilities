@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.1
+
+### Patch Changes
+
+-   e870e6f: Fixed an issue were CSS Variable declarations were getting duplicated.
+
 ## 1.3.0
 
 ### Minor Changes
