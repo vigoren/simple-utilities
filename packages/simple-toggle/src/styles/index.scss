@@ -1,0 +1,55 @@
+:root {
+  --simple-toggle-border-color: #9a9a9a;
+  --simple-toggle-border-color-checked: #9a9a9a;
+  --simple-toggle-bg-color: #fff;
+  --simple-toggle-bg-color-checked: #fff;
+  --simple-toggle-marker-color: rgba(0, 0, 0, 0.5);
+  --simple-toggle-marker-color-checked: rgb(0 108 219 / 52%);
+
+  --simple-toggle-marker: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+[data-theme='dark']{
+    --simple-toggle-border-color: #696969;
+    --simple-toggle-border-color-checked: #696969;
+    --simple-toggle-bg-color: #0a0a0a;
+    --simple-toggle-bg-color-checked: #0a0a0a;
+    --simple-toggle-marker-color: #d3d3d3;
+    --simple-toggle-marker-color-checked: rgb(78 165 255 / 70%);
+}
+
+input[type=checkbox].simple-toggle{
+  flex: 0 2rem;
+  min-width: 2rem;
+  height: 1rem;
+  margin: 0.063rem 0.25rem 0;
+  background-color: var(--simple-toggle-bg-color);
+  border: 1px solid var(--simple-toggle-border-color);
+  cursor: pointer;
+  appearance: none;
+  border-radius: 2em;
+  vertical-align: middle;
+
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--simple-toggle-marker-color);
+    mask-repeat: no-repeat;
+    mask-position: left center;
+    mask-size: contain;
+    mask-image: var(--simple-toggle-marker);
+    transition: mask-position .15s ease-in-out;
+  }
+
+  &:checked{
+    border-color: var(--simple-toggle-border-color-checked);
+    background-color: var(--simple-toggle-bg-color-checked);
+    &::before{
+      mask-position: right center;
+      background-color: var(--simple-toggle-marker-color-checked);
+      filter: unset;
+    }
+  }
+}
