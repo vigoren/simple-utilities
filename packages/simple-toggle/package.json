@@ -1,6 +1,6 @@
 {
     "name": "@simple-web-utilities/simple-toggle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple toggle style for check boxes",
     "type": "module",
     "main": "dist/simple-toggle.umd.js",

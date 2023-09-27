@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.1
+
+### Patch Changes
+
+-   05569e6: Broke the border css into individual components for more reliable updating of the variable.
+
 ## 1.0.0
 
 ### Major Changes
