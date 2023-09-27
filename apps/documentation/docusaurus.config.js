@@ -95,6 +95,12 @@ const config = {
                         label: "Simple Multi-Select"
                     },
                     {
+                        type: "docSidebar",
+                        sidebarId: "simpleToggleSidebar",
+                        position: "left",
+                        label: "Simple Toggle"
+                    },
+                    {
                         href: "https://github.com/vigoren/simple-web-utilities",
                         position: "right",
                         className: "header-github-link",

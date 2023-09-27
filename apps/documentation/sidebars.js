@@ -55,7 +55,8 @@ const sidebars = {
             },
             items: ["simple-multi-select/javascript/api/modules", "simple-multi-select/javascript/api/classes/MultiSelect"]
         }
-    ]
+    ],
+    simpleToggleSidebar: ["simple-toggle/index", "simple-toggle/css-variables"]
 
     // But you can create a sidebar manually
     /*
