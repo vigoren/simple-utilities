@@ -1,0 +1,38 @@
+{
+    "name": "@simple-web-utilities/simple-toggle",
+    "version": "0.0.0",
+    "description": "A simple toggle style for check boxes",
+    "type": "module",
+    "main": "dist/simple-toggle.umd.js",
+    "module": "dist/simple-toggle.js",
+    "style": "dist/simple-toggle.css",
+    "types": "dist/simple-toggle.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "tsc && vite build --config vite.config.dev.js && vite --host"
+    },
+    "browserslist": [
+        "> 3%",
+        "last 2 versions"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vigoren/simple-web-utilities.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "toggle",
+        "css"
+    ],
+    "author": "Dean Vigoren (Vigorator)",
+    "license": "MPL-2.0",
+    "bugs": {
+        "url": "https://github.com/vigoren/simple-web-utilities/issues"
+    },
+    "homepage": "https://github.com/vigoren/simple-web-utilities/packages/simple-toggle#readme"
+}

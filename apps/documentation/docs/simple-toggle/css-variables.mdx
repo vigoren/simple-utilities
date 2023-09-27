@@ -1,0 +1,207 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ColorPreview from "../../src/components/ColorPreview";
+import ToggleExample from "../../src/components/ToggleExample";
+
+# CSS Variables
+
+Simple Toggle uses CSS variables to allow you to customize the look and feel of the component. The following variables are available:
+
+## --simple-toggle-border-color
+
+The border color of the toggle.
+
+**Default:** <ColorPreview color="#9a9a9a" />
+
+<Tabs>
+  <TabItem value="stbc1" label="Default">
+
+    <ToggleExample id="stbc1" />
+
+    ```css
+    :root {
+    --simple-toggle-border-color: #9a9a9a;
+  }
+    ```
+
+  </TabItem>
+  <TabItem value="stbc2" label="Red">
+
+    <div style={{'--simple-toggle-border-color': '#ff0000'}}>
+      <ToggleExample id="stbc2" />
+    </div>
+
+    ```css
+    :root {
+    --simple-toggle-border-color: #ff0000;
+  }
+    ```
+
+  </TabItem>
+</Tabs>
+
+## --simple-toggle-border-color-checked
+
+The border color of the toggle when it is checked.
+
+**Default:** <ColorPreview color="#9a9a9a" />
+
+<Tabs>
+  <TabItem value="stbcc1" label="Default">
+
+  <ToggleExample id="stbcc1" />
+
+  ```css
+  :root {
+  --simple-toggle-border-color-checked: #9a9a9a;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="stbcc2" label="Red">
+
+  <div style={{'--simple-toggle-border-color-checked': '#ff0000'}}>
+    <ToggleExample id="stbcc2" />
+  </div>
+
+  ```css
+  :root {
+  --simple-toggle-border-color-checked: #ff0000;
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+
+## --simple-toggle-bg-color
+
+The background color of the toggle.
+
+**Default:** <ColorPreview color="#fff" />
+
+<Tabs>
+  <TabItem value="stbgc1" label="Default">
+
+  <ToggleExample id="stbgc1" />
+
+  ```css
+  :root {
+  --simple-toggle-bg-color: #fff;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="stbgc2" label="Red">
+
+  <div style={{'--simple-toggle-bg-color': '#ff0000'}}>
+    <ToggleExample id="stbgc2" />
+  </div>
+
+  ```css
+  :root {
+  --simple-toggle-bg-color: #ff0000;
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+
+## --simple-toggle-bg-color-checked
+
+The background color of the toggle when it is checked.
+
+**Default:** <ColorPreview color="#fff" />
+
+<Tabs>
+  <TabItem value="stbgcc1" label="Default">
+
+  <ToggleExample id="stbgcc1" />
+
+  ```css
+  :root {
+  --simple-toggle-bg-color-checked: #fff;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="stbgcc2" label="Red">
+
+  <div style={{'--simple-toggle-bg-color-checked': '#ff0000'}}>
+    <ToggleExample id="stbgcc2" />
+  </div>
+
+  ```css
+  :root {
+  --simple-toggle-bg-color-checked: #ff0000;
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+
+## --simple-toggle-marker-color
+
+The color of the toggle marker when it is unchecked.
+
+**Default:** <ColorPreview color="rgba(0, 0, 0, 0.5)" />
+
+<Tabs>
+  <TabItem value="stmc1" label="Default">
+
+  <ToggleExample id="stmc1" />
+
+  ```css
+  :root {
+  --simple-toggle-marker-color: rgba(0, 0, 0, 0.5);
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="stmc2" label="Red">
+
+  <div style={{'--simple-toggle-marker-color': '#ff0000'}}>
+    <ToggleExample id="stmc2" />
+  </div>
+
+  ```css
+  :root {
+  --simple-toggle-marker-color: #ff0000;
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+
+## --simple-toggle-marker-color-checked
+
+The color of the toggle marker when it is checked.
+
+**Default:** <ColorPreview color="rgb(0 108 219 / 52%)" />
+
+<Tabs>
+  <TabItem value="stmc1" label="Default">
+
+  <ToggleExample id="stmc1" />
+
+  ```css
+  :root {
+  --simple-toggle-marker-color-checked: rgb(0 108 219 / 52%);
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="stmc2" label="Red">
+
+  <div style={{'--simple-toggle-marker-color-checked': '#ff0000'}}>
+    <ToggleExample id="stmc2" />
+  </div>
+
+  ```css
+  :root {
+  --simple-toggle-marker-color-checked: #ff0000;
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+

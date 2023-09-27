@@ -40,6 +40,14 @@ export default function Home() {
                                 </FeatureBlock>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col">
+                                <FeatureBlock title="Simple Toggle" link="docs/simple-toggle">
+                                    <p>Simple Toggle is a library that changes checkboxes into a toggle.</p>
+                                </FeatureBlock>
+                            </div>
+                            <div className="col"></div>
+                        </div>
                     </div>
                 </section>
             </main>

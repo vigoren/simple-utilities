@@ -1,5 +1,6 @@
 @import '@simple-web-utilities/simple-animation/dist/simple-animation.css';
 @import '@simple-web-utilities/simple-multi-select/dist/simple-multi-select.css';
+@import "@simple-web-utilities/simple-toggle/dist/simple-toggle.css";
 
 /**
  * Any CSS included here will be global. The classic template

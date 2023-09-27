@@ -1,0 +1,65 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ColorPreview from "../../src/components/ColorPreview";
+import ToggleExample from "../../src/components/ToggleExample";
+
+# Simple Toggle
+
+A CSS only library that changes the appearance of checkboxes to look like toggles.
+
+## Installation
+
+```bash
+npm install @simple-web-utilities/simple-toggle
+```
+
+## Getting Started
+
+To get started make sure that you include the CSS on your page or into your project files.
+
+### HTML
+
+The HTML for the toggle is very simple. It is just a native input element with the type of `checkbox` and a class of `simple-toggle`.
+
+```html
+<input type="checkbox" class="simple-toggle" />
+```
+
+### CSS
+
+You can link to the css file directly or import it into your own css file.
+
+:::note
+
+It is encouraged to import the library into your own css file.
+
+:::
+
+
+<Tabs>
+  <TabItem value="file" label="CSS File">
+
+  ```html
+  <link rel="stylesheet" href="node_modules/@simple-web-utilities/simple-toggle/dist/simple-toggle.css" />
+  ```
+
+  </TabItem>
+  <TabItem value="import" label="Import">
+
+  ```css
+  @import '@simple-web-utilities/simple-toggle/dist/simple-toggle.css';
+  ```
+
+  </TabItem>
+</Tabs>
+
+For more options on customizing the CSS check out the available [CSS Variables](css-variables).
+
+
+#### Dark Mode
+
+This library supports dark mode by setting the `data-theme` attribute on the `html` element. The default theme is `light`. To use the dark theme set the `data-theme` attribute to `dark`.
+
+```html
+<html data-theme="dark">
+```
