@@ -24,7 +24,9 @@ input[type=checkbox].simple-toggle{
   height: 1rem;
   margin: 0.063rem 0.25rem 0;
   background-color: var(--simple-toggle-bg-color);
-  border: 1px solid var(--simple-toggle-border-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--simple-toggle-border-color);
   cursor: pointer;
   appearance: none;
   border-radius: 2em;
