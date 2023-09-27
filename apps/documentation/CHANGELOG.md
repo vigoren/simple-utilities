@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.3.0
+
+### Minor Changes
+
+-   dfd44a2: Updated to the latest version of docusaurus
+
+### Patch Changes
+
+-   Updated dependencies [dfd44a2]
+    -   @simple-web-utilities/simple-toggle@1.0.0
+
 ## 1.2.3
 
 ### Patch Changes
