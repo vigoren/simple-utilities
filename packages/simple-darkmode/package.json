@@ -1,6 +1,6 @@
 {
     "name": "@simple-web-utilities/simple-darkmode",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "A simple interface for changing the color scheme of a website.",
     "type": "module",
     "main": "dist/simple-darkmode.umd.js",
