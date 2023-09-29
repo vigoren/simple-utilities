@@ -1,0 +1,48 @@
+:root{
+  --simple-dark-mode-font-size: 1rem;
+  --simple-dark-mode-border-radius: 5px;
+  --simple-dark-mode-border-color: #9a9a9a;
+  --simple-dark-mode-border-color-hover: #9a9a9a;
+  --simple-dark-mode-bg-color: #FFFFFF;
+  --simple-dark-mode-bg-color-hover: #FFFFFF;
+  --simple-dark-mode-color: #000000;
+  --simple-dark-mode-color-hover: #000000;
+  --simple-dark-mode-box-shadow-hover: 0 0 0 0.125rem rgb(0 108 219 / 52%);
+
+}
+[data-theme='dark']{
+  --simple-dark-mode-border-color: #696969;
+  --simple-dark-mode-border-color-hover: #696969;
+  --simple-dark-mode-bg-color: #0a0a0a;
+  --simple-dark-mode-bg-color-hover: #0a0a0a;
+  --simple-dark-mode-color: #FFFFFF;
+  --simple-dark-mode-color-hover: #FFFFFF;
+  --simple-dark-mode-box-shadow-hover: 0 0 0 0.125rem rgb(78 165 255 / 70%);
+}
+
+
+.simple-dark-mode-toggle{
+  border-color: var(--simple-dark-mode-border-color);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--simple-dark-mode-border-radius);
+  background-color: var(--simple-dark-mode-bg-color);
+  color: var(--simple-dark-mode-color);
+  font-size: var(--simple-dark-mode-font-size);
+  line-height: 1.25;
+  padding: calc(var(--simple-dark-mode-font-size) * .25) calc(var(--simple-dark-mode-font-size) * .5);
+  margin: 0;
+  cursor: pointer;
+
+  .simple-dark-mode-icon{
+    font-size: var(--simple-dark-mode-font-size);
+  }
+
+  &:hover, &:focus{
+    background-color: var(--simple-dark-mode-bg-color-hover);
+    border-color: var(--simple-dark-mode-border-color-hover);
+    color: var(--simple-dark-mode-color-hover);
+    box-shadow: var(--simple-dark-mode-box-shadow-hover);
+    outline: 0;
+  }
+}
