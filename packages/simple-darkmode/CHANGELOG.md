@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.2
+
+### Patch Changes
+
+-   5c88469: Fixed issue where library would not import properly into some frameworks because the exports field was not specified in the package.json
+
 ## 1.0.1
 
 ### Patch Changes
