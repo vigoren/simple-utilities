@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.1
+
+### Patch Changes
+
+-   d67e79e: Fixed darkmode not applying to the button if the class attribute was used to set dark/light mode.
+
 ## 1.0.0
 
 ### Major Changes
