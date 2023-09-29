@@ -10,6 +10,18 @@
     "files": [
         "dist"
     ],
+    "exports": {
+        ".": {
+            "import": "./dist/simple-darkmode.js",
+            "require": "./dist/simple-darkmode.umd.js",
+            "default": "./dist/simple-darkmode.umd.js"
+        },
+        "./css": {
+            "import": "./dist/simple-darkmode.css",
+            "require": "./dist/simple-darkmode.css",
+            "default": "./dist/simple-darkmode.css"
+        }
+    },
     "scripts": {
         "build": "tsc && vite build",
         "dev": "tsc && vite build --config vite.config.dev.js && vite --host"
