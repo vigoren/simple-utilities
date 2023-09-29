@@ -1,4 +1,4 @@
-:root{
+:root, [data-theme='light']{
   --simple-dark-mode-font-size: 1rem;
   --simple-dark-mode-border-radius: 5px;
   --simple-dark-mode-border-color: #9a9a9a;
@@ -10,7 +10,7 @@
   --simple-dark-mode-box-shadow-hover: 0 0 0 0.125rem rgb(0 108 219 / 52%);
 
 }
-[data-theme='dark']{
+:root.dark, [data-theme='dark']{
   --simple-dark-mode-border-color: #696969;
   --simple-dark-mode-border-color-hover: #696969;
   --simple-dark-mode-bg-color: #0a0a0a;
