@@ -6,7 +6,7 @@ export default (ctx) => {
             autoprefixer: {},
             "postcss-prefixer": {
                 prefix: "sdm-",
-                ignore: [/simple-/]
+                ignore: [/simple-/, "dark", "light"]
             },
             cssnano: {
                 preset: "advanced"
