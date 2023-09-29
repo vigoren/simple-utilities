@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Dark Mode - Tests</title>
+  <style>
+      :root{
+          --bg-color: #ffffff;
+          --text-color: #000000;
+      }
+      body{
+          background-color: var(--bg-color);
+          color: var(--text-color);
+      }
+      [data-theme="dark"] {
+          --bg-color: #000000;
+          --text-color: #ffffff;
+      }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+<button type="button" id="toggle-theme">Toggle Theme</button>
+<button type="button" id="toggle-theme2">Toggle Theme</button>
+<button type="button" id="toggle-theme3">Toggle Theme</button>
+<div style="--simple-dark-mode-border-color: transparent;--simple-dark-mode-border-color-hover: transparent;--simple-dark-mode-bg-color-hover:#9a9a9a;">
+  <button type="button" id="actual">Toggle Theme</button>
+</div>
+<script type="module">
+  import DarkMode from "./scripts/index.ts";
+  const darkMode = new DarkMode({
+    elementId: 'toggle-theme',
+    attribute: 'data-theme',
+    iconProvider: 'none'
+  });
+  const darkMode2 = new DarkMode({
+    elementId: 'toggle-theme2',
+    attribute: 'data-theme',
+    iconProvider: 'fontawesome'
+  });
+  const darkMode3 = new DarkMode({
+    elementId: 'toggle-theme3',
+    attribute: 'data-theme',
+    iconProvider: 'material'
+  });
+  const darkModea = new DarkMode({
+    elementId: 'actual',
+    attribute: 'data-theme',
+    iconProvider: 'fontawesome'
+  });
+</script>
+</body>
+</html>
