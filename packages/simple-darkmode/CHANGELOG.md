@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+-   6f032dc: Added a new icon provider of "custom" that when set will check the config for a customIcon object containing and HTML element or string to use as icons for the light and dark icons.
+
 ## 1.0.2
 
 ### Patch Changes
