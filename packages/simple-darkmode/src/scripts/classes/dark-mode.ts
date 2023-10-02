@@ -23,7 +23,7 @@ export class DarkMode {
      * Options are "fontawesome", "material", "octicons", or "none"
      * @private
      */
-    readonly #iconProvider: "fontawesome" | "material" | "none";
+    readonly #iconProvider: "fontawesome" | "material" | "custom" | "none";
     /**
      * The id of the element to use as the toggle button
      * @private
@@ -34,11 +34,17 @@ export class DarkMode {
      * @private
      */
     #observer: MutationObserver;
+
+    #customIcons: { light: string | HTMLElement; dark: string | HTMLElement } | undefined;
     constructor(config: DarkModeConfig = { elementId: "", attribute: "class", iconProvider: "none" }) {
         this.#attribute = config.attribute;
         this.#iconProvider = config.iconProvider;
         this.#elementId = config.elementId;
         this.#observer = new MutationObserver(this.#mutationCallback);
+
+        if (config.customIcons) {
+            this.#customIcons = config.customIcons;
+        }
 
         let theme: Modes;
         if (!(this.#localStorageKey in localStorage)) {
@@ -131,6 +137,17 @@ export class DarkMode {
             const icon = document.createElement("i");
             icon.classList.add("simple-dark-mode-icon");
             switch (this.#iconProvider) {
+                case "custom":
+                    if (this.#customIcons) {
+                        if (theme === Modes.DARK) {
+                            icon.innerHTML =
+                                this.#customIcons.light instanceof HTMLElement ? this.#customIcons.light.innerHTML : this.#customIcons.light;
+                        } else {
+                            icon.innerHTML =
+                                this.#customIcons.dark instanceof HTMLElement ? this.#customIcons.dark.innerHTML : this.#customIcons.dark;
+                        }
+                    }
+                    break;
                 case "material":
                     icon.classList.add("material-symbols-outlined");
                     if (theme === Modes.DARK) {
